@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Health Nexus Partners</title>
+<meta name="description" content="Get in touch with Health Nexus Partners — physicians, investors, founders, and policymakers working through healthcare's hardest problems together.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0C3644;        /* Dark Turquoise 10% */
+    --aqua:#0A7A99;        /* Aqua Blue 25% — official brand color */
+    --cream:#EBDFCD;       /* Bone 30% */
+    --cream-light:#FCF7F2; /* Light Cream 40% */
+    --saffron:#D88044;     /* Saffron 10% */
+    --saffron-deep:#B96B2E;
+    --ink:#0C3644;
+    --line: rgba(12,54,68,0.12);
+    --line-onnavy: rgba(235,223,205,0.18);
+    --radius:10px;
+    --shadow:0 24px 60px -24px rgba(13,47,54,0.4);
+    --ff-display:'PT Serif', Georgia, serif;
+    --ff-body:'Outfit', -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--ff-body); color:var(--ink); background:var(--cream); line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  h1,h2,h3{font-family:var(--ff-display); line-height:1.15;}
+  .wrap{max-width:1200px; margin:0 auto; padding:0 32px;}
+  @media (max-width:640px){ .wrap{padding:0 22px;} }
+  section{padding:100px 0;}
+  @media (max-width:760px){ section{padding:64px 0;} }
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:14px 28px; border-radius:999px; font-weight:600; font-size:15px; transition:transform .15s ease, box-shadow .15s ease;}
+  .btn-primary{background:var(--saffron); color:var(--cream-light);}
+  .btn-primary:hover{transform:translateY(-1px); box-shadow:0 14px 28px -12px rgba(216,128,68,.55);}
+  .btn-outline{border:1.5px solid var(--line-onnavy); color:var(--cream-light);}
+  .btn-outline:hover{background:rgba(235,223,205,.08);}
+
+  /* ===== Nav ===== */
+  header{position:sticky; top:0; z-index:50; background:var(--navy); border-bottom:1px solid var(--line-onnavy);}
+  nav.wrap{display:flex; align-items:center; justify-content:space-between; height:84px; gap:16px;}
+  .brand{display:flex; align-items:center; gap:12px; flex-shrink:0;}
+  .brand img{height:30px; width:auto;}
+  .brand span{font-family:var(--ff-body); font-weight:700; letter-spacing:.06em; font-size:16px; color:var(--cream-light); text-transform:uppercase; white-space:nowrap;}
+  .nav-right{display:flex; align-items:center; gap:30px;}
+  .nav-links{display:flex; align-items:center; gap:26px;}
+  .nav-links a{font-size:14.5px; font-weight:500; color:var(--cream); opacity:.9; white-space:nowrap;}
+  .nav-links a:hover{opacity:1; color:var(--cream-light);}
+  .nav-links a.active{opacity:1; color:var(--cream-light);}
+  .nav-cta{display:flex; align-items:center; gap:12px; flex-shrink:0;}
+  .nav-cta .btn{padding:10px 20px; font-size:14px; white-space:nowrap;}
+  .nav-toggle{display:none; align-items:center; justify-content:center; width:40px; height:40px; background:none; border:none; cursor:pointer; flex-shrink:0; padding:0;}
+  .nav-toggle span{display:block; width:22px; height:2px; background:var(--cream-light); position:relative; transition:background .15s ease;}
+  .nav-toggle span::before,.nav-toggle span::after{content:''; position:absolute; left:0; width:22px; height:2px; background:var(--cream-light); transition:transform .2s ease, top .2s ease;}
+  .nav-toggle span::before{top:-7px;}
+  .nav-toggle span::after{top:7px;}
+  header.open .nav-toggle span{background:transparent;}
+  header.open .nav-toggle span::before{top:0; transform:rotate(45deg);}
+  header.open .nav-toggle span::after{top:0; transform:rotate(-45deg);}
+
+  @media (max-width:900px){
+    .nav-right{display:none; position:absolute; top:84px; left:0; right:0; background:var(--navy); border-bottom:1px solid var(--line-onnavy); flex-direction:column; align-items:stretch; gap:0; padding:8px 0 24px; box-shadow:0 20px 40px -20px rgba(0,0,0,.4);}
+    header.open .nav-right{display:flex;}
+    .nav-links{flex-direction:column; align-items:stretch; gap:0;}
+    .nav-links a{padding:14px 32px; border-top:1px solid var(--line-onnavy); opacity:1;}
+    .nav-cta{flex-direction:column; align-items:stretch; gap:10px; padding:18px 32px 0;}
+    .nav-cta .btn{justify-content:center;}
+    .nav-toggle{display:flex;}
+  }
+
+  /* ===== Contact hero ===== */
+  .contact-hero{background:var(--navy); color:var(--cream-light); padding:90px 0 60px; text-align:center;}
+  .contact-hero .tag{font-size:13px; letter-spacing:.14em; text-transform:uppercase; font-weight:600; color:var(--saffron);}
+  .contact-hero h1{font-size:clamp(30px,4.4vw,46px); font-weight:700; margin:16px auto 18px; max-width:18ch;}
+  .contact-hero p{font-size:17.5px; color:var(--cream); max-width:54ch; margin:0 auto;}
+
+  /* ===== Form section ===== */
+  .contact-form-wrap{background:var(--cream-light);}
+  .form-card{
+    max-width:720px; margin:0 auto;
+    background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:8px;
+  }
+  .form-card iframe{display:block; width:100%; border:none; border-radius:8px;}
+
+  /* ===== Footer ===== */
+  footer{background:var(--navy); color:var(--cream); padding:64px 0 36px; border-top:1px solid var(--line-onnavy);}
+  .footer-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:32px; margin-bottom:40px;}
+  footer .brand span{color:var(--cream-light);}
+  footer p.tagline{margin-top:10px; font-size:14px; color:var(--cream); opacity:.8; max-width:30ch;}
+  .footer-col h4{font-size:13px; text-transform:uppercase; letter-spacing:.1em; color:var(--cream-light); margin-bottom:14px;}
+  .footer-col a{display:block; font-size:14.5px; color:var(--cream); opacity:.85; margin-bottom:8px;}
+  .footer-col a:hover{opacity:1;}
+  .footer-bottom{border-top:1px solid var(--line-onnavy); padding-top:24px; font-size:13px; color:var(--cream); opacity:.65;}
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <nav class="wrap">
+    <a href="../" class="brand">
+      <img src="../assets/images/isotype-cream.png" alt="Health Nexus Partners mark">
+      <span>Health Nexus Partners</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-right">
+      <span></span>
+    </button>
+    <div class="nav-right" id="nav-right">
+      <div class="nav-links">
+        <a href="../#what-we-do">What We Do</a>
+        <a href="../#who-its-for">Who It's For</a>
+        <a href="../#find-your-room">Find Your Room</a>
+        <a href="../#founder">About</a>
+        <a href="../#insights">Insights</a>
+      </div>
+      <div class="nav-cta">
+        <a href="./" class="btn btn-outline">Contact</a>
+        <a href="https://luma.com/whn2026" class="btn btn-primary" target="_blank" rel="noopener">Register for WHN</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<script>
+  (function(){
+    var header = document.getElementById('site-header');
+    var toggle = document.getElementById('nav-toggle');
+    var panel = document.getElementById('nav-right');
+    toggle.addEventListener('click', function(){
+      var isOpen = header.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    panel.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        header.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
+
+<section class="contact-hero">
+  <div class="wrap">
+    <span class="tag">Get in touch</span>
+    <h1>Let's find the right room for you.</h1>
+    <p>Whether you're exploring sponsorship, looking to connect on deal flow, or want to get involved with an upcoming event — tell us a bit about what you're working on.</p>
+  </div>
+</section>
+
+<section class="contact-form-wrap">
+  <div class="wrap">
+    <div class="form-card">
+      <iframe
+          src="https://links.doctogrow.com/widget/form/JYhu1fjie8HiYLPf46pI"
+          style="width:100%;height:896px;border:none;border-radius:8px"
+          id="inline-JYhu1fjie8HiYLPf46pI"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="HNP - Website Contact Form"
+          data-height="896"
+          data-layout-iframe-id="inline-JYhu1fjie8HiYLPf46pI"
+          data-form-id="JYhu1fjie8HiYLPf46pI"
+          data-cookie-consent="true"
+          data-cookie-consent-provider="auto"
+          title="HNP - Website Contact Form"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="../" class="brand">
+          <img src="../assets/images/isotype-cream.png" alt="Health Nexus Partners mark" style="height:26px;">
+          <span>Health Nexus Partners</span>
+        </a>
+        <p class="tagline">The platform where health, capital, and policy meet.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="../#what-we-do">What We Do</a>
+        <a href="../#who-its-for">Who It's For</a>
+        <a href="../#find-your-room">Find Your Room</a>
+        <a href="/whn/" target="_blank" rel="noopener">Women's Health Nexus</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="./">Contact</a>
+        <a href="https://www.linkedin.com/in/vipulkella/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://thetranslationnexus.substack.com" target="_blank" rel="noopener">Substack</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Health Nexus Partners</div>
+  </div>
+</footer>
+
+<script src="https://links.doctogrow.com/js/form_embed.js"></script>
+</body>
+</html>
