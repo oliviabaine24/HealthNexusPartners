@@ -40,9 +40,31 @@
   .brand{display:flex; align-items:center; gap:12px; flex-shrink:0;}
   .brand img{height:30px; width:auto;}
   .brand span{font-weight:700; letter-spacing:.06em; font-size:16px; color:var(--cream-light); text-transform:uppercase; white-space:nowrap;}
+  .nav-right{display:flex; align-items:center; gap:30px;}
   .nav-links{display:flex; align-items:center; gap:26px;}
   .nav-links a{font-size:14.5px; font-weight:500; color:var(--cream); opacity:.9; white-space:nowrap;}
   .nav-links a:hover{opacity:1; color:var(--cream-light);}
+  .nav-links a.active{opacity:1; color:var(--cream-light);}
+  .nav-cta{display:flex; align-items:center; gap:12px; flex-shrink:0;}
+  .nav-cta .btn{padding:10px 20px; font-size:14px; white-space:nowrap;}
+  .nav-toggle{display:none; align-items:center; justify-content:center; width:40px; height:40px; background:none; border:none; cursor:pointer; flex-shrink:0; padding:0;}
+  .nav-toggle span{display:block; width:22px; height:2px; background:var(--cream-light); position:relative; transition:background .15s ease;}
+  .nav-toggle span::before,.nav-toggle span::after{content:''; position:absolute; left:0; width:22px; height:2px; background:var(--cream-light); transition:transform .2s ease, top .2s ease;}
+  .nav-toggle span::before{top:-7px;}
+  .nav-toggle span::after{top:7px;}
+  header.open .nav-toggle span{background:transparent;}
+  header.open .nav-toggle span::before{top:0; transform:rotate(45deg);}
+  header.open .nav-toggle span::after{top:0; transform:rotate(-45deg);}
+
+  @media (max-width:900px){
+    .nav-right{display:none; position:absolute; top:84px; left:0; right:0; background:var(--navy); border-bottom:1px solid var(--line-onnavy); flex-direction:column; align-items:stretch; gap:0; padding:8px 0 24px; box-shadow:0 20px 40px -20px rgba(0,0,0,.4);}
+    header.open .nav-right{display:flex;}
+    .nav-links{flex-direction:column; align-items:stretch; gap:0;}
+    .nav-links a{padding:14px 32px; border-top:1px solid var(--line-onnavy); opacity:1;}
+    .nav-cta{flex-direction:column; align-items:stretch; gap:10px; padding:18px 32px 0;}
+    .nav-cta .btn{justify-content:center;}
+    .nav-toggle{display:flex;}
+  }
 
   /* hero */
   .hero{background:var(--navy); color:var(--cream-light); padding:90px 0 70px; text-align:center;}
@@ -127,19 +149,48 @@
 </head>
 <body>
 
-<header>
+<header id="site-header">
   <nav class="wrap">
     <a href="../" class="brand">
       <img src="../assets/images/isotype-cream.png" alt="Health Nexus Partners mark">
       <span>Health Nexus Partners</span>
     </a>
-    <div class="nav-links">
-      <a href="../#what-we-do">What We Do</a>
-      <a href="../#find-your-room">Find Your Room</a>
-      <a href="../contact/" class="btn btn-outline" style="padding:10px 20px; font-size:14px;">Contact</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-right">
+      <span></span>
+    </button>
+    <div class="nav-right" id="nav-right">
+      <div class="nav-links">
+        <a href="../#what-we-do">What We Do</a>
+        <a href="../#who-its-for">Who It's For</a>
+        <a href="../#find-your-room">Find Your Room</a>
+        <a href="./" class="active">Sponsor</a>
+        <a href="../#founder">About</a>
+        <a href="../#insights">Insights</a>
+      </div>
+      <div class="nav-cta">
+        <a href="../contact/" class="btn btn-outline">Contact</a>
+        <a href="https://luma.com/whn2026" class="btn btn-primary" target="_blank" rel="noopener">Register for WHN</a>
+      </div>
     </div>
   </nav>
 </header>
+<script>
+  (function(){
+    var header = document.getElementById('site-header');
+    var toggle = document.getElementById('nav-toggle');
+    var panel = document.getElementById('nav-right');
+    toggle.addEventListener('click', function(){
+      var isOpen = header.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    panel.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        header.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
 
 <section class="hero">
   <div class="wrap">
