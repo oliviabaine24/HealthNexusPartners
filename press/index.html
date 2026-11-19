@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vipul Kella — Press &amp; Media Kit</title>
+<meta name="description" content="Press and media kit for Vipul Kella — emergency physician, investor, and founder of Health Nexus Partners. Bio copy, fast facts, headshots, and logo assets.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0C3644; --aqua:#0A7A99; --cream:#EBDFCD; --cream-light:#FCF7F2;
+    --saffron:#D88044; --saffron-deep:#B96B2E; --ink:#0C3644;
+    --line: rgba(12,54,68,0.12); --line-onnavy: rgba(235,223,205,0.18);
+    --radius:10px; --shadow:0 24px 60px -24px rgba(13,47,54,0.4);
+    --ff-display:'PT Serif', Georgia, serif; --ff-body:'Outfit', -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--ff-body); color:var(--ink); background:var(--cream); line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  h1,h2,h3{font-family:var(--ff-display); line-height:1.15;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 32px;}
+  @media (max-width:640px){ .wrap{padding:0 22px;} }
+  section{padding:90px 0;}
+  @media (max-width:760px){ section{padding:60px 0;} }
+  .tag{font-size:13px; letter-spacing:.14em; text-transform:uppercase; font-weight:600; color:var(--aqua);}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:14px 28px; border-radius:999px; font-weight:600; font-size:15px; transition:transform .15s ease, box-shadow .15s ease;}
+  .btn-outline{border:1.5px solid var(--line-onnavy); color:var(--cream-light);}
+  .btn-outline:hover{background:rgba(235,223,205,.08);}
+  .btn-sm{padding:10px 18px; font-size:13.5px; border-radius:8px;}
+  .btn-dl{background:var(--navy); color:var(--cream-light);}
+  .btn-dl:hover{background:#0a2a35;}
+
+  header{position:sticky; top:0; z-index:50; background:var(--navy); border-bottom:1px solid var(--line-onnavy);}
+  nav.wrap{display:flex; align-items:center; justify-content:space-between; height:84px; gap:16px;}
+  .brand{display:flex; align-items:center; gap:12px; flex-shrink:0;}
+  .brand img{height:30px; width:auto;}
+  .brand span{font-weight:700; letter-spacing:.06em; font-size:16px; color:var(--cream-light); text-transform:uppercase; white-space:nowrap;}
+  .nav-links{display:flex; align-items:center; gap:26px;}
+  .nav-links a{font-size:14.5px; font-weight:500; color:var(--cream); opacity:.9; white-space:nowrap;}
+  .nav-links a:hover{opacity:1; color:var(--cream-light);}
+
+  .vk-hero{background:var(--navy); color:var(--cream-light); padding:80px 0 56px; text-align:center;}
+  .vk-hero h1{font-size:clamp(28px,4vw,42px); margin:14px auto 14px; max-width:20ch;}
+  .vk-hero p{font-size:16.5px; color:var(--cream); max-width:54ch; margin:0 auto;}
+
+  h2.section-title{font-size:clamp(24px,3.2vw,32px); color:var(--navy); margin-bottom:28px;}
+
+  .bio-card{background:var(--cream-light); border:1px solid var(--line); border-radius:var(--radius); padding:28px 30px; margin-bottom:20px; position:relative;}
+  .bio-card .label{display:block; font-size:11.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--saffron-deep); margin-bottom:12px;}
+  .bio-card p{font-size:15.5px; color:rgba(12,54,68,.82); line-height:1.65;}
+
+  .facts-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;}
+  @media (max-width:640px){ .facts-grid{grid-template-columns:1fr;} }
+  .fact{background:var(--cream-light); padding:22px 26px;}
+  .fact .k{font-size:11.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--aqua); margin-bottom:6px; display:block;}
+  .fact .v{font-size:15px; color:var(--navy);}
+
+  .asset-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  @media (max-width:860px){ .asset-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:560px){ .asset-grid{grid-template-columns:1fr;} }
+  .asset-card{background:var(--cream-light); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; display:flex; flex-direction:column;}
+  .asset-preview{background:#fff; display:flex; align-items:center; justify-content:center; padding:24px; min-height:140px;}
+  .asset-preview.dark{background:var(--navy);}
+  .asset-preview img{max-height:90px; width:auto; max-width:100%;}
+  .asset-preview img.tall{max-height:110px;}
+  .asset-body{padding:16px 18px 20px; display:flex; flex-direction:column; gap:10px; flex:1;}
+  .asset-body .name{font-size:14px; font-weight:600; color:var(--navy);}
+  .asset-body .meta{font-size:12.5px; color:rgba(12,54,68,.55);}
+
+  footer{background:var(--navy); color:var(--cream); padding:64px 0 36px; border-top:1px solid var(--line-onnavy);}
+  .footer-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:32px; margin-bottom:40px;}
+  footer .brand span{color:var(--cream-light);}
+  footer p.tagline{margin-top:10px; font-size:14px; color:var(--cream); opacity:.8; max-width:30ch;}
+  .footer-col h4{font-size:13px; text-transform:uppercase; letter-spacing:.1em; color:var(--cream-light); margin-bottom:14px;}
+  .footer-col a{display:block; font-size:14.5px; color:var(--cream); opacity:.85; margin-bottom:8px;}
+  .footer-col a:hover{opacity:1;}
+  .footer-bottom{border-top:1px solid var(--line-onnavy); padding-top:24px; font-size:13px; color:var(--cream); opacity:.65;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="../" class="brand">
+      <img src="../assets/images/isotype-cream.png" alt="Health Nexus Partners mark">
+      <span>Health Nexus Partners</span>
+    </a>
+    <div class="nav-links">
+      <a href="../about/">About Vipul</a>
+      <a href="../speaking/">Speaking</a>
+      <a href="../contact/" class="btn btn-outline" style="padding:10px 20px; font-size:14px;">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="vk-hero">
+  <div class="wrap">
+    <span class="tag" style="color:var(--saffron);">Press &amp; Media</span>
+    <h1>Everything a journalist or event organizer needs, in one place.</h1>
+    <p>Bio copy at three lengths, fast facts, headshots, and logo assets — ready to drop into a program, a bio page, or a story.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="section-title">Bio copy</h2>
+
+    <div class="bio-card">
+      <span class="label">Short — 1 sentence</span>
+      <p>Vipul Kella, MD is a practicing emergency physician and investor, and founder of Health Nexus Partners, the platform connecting healthcare's clinical, capital, and policy worlds.</p>
+    </div>
+
+    <div class="bio-card">
+      <span class="label">Medium — 1 paragraph</span>
+      <p>Vipul Kella, MD is a practicing emergency physician and investor who founded Health Nexus Partners to close the distance between clinical practice, capital, and company building — three worlds that rarely talk to each other. He argues healthcare's real problem isn't innovation, it's translation: the clinical knowledge, the capital, and the policy intent already exist, they just sit in separate rooms. Through Health Nexus Partners' curated events, SPVs, and advisory work, he puts those rooms together.</p>
+    </div>
+
+    <div class="bio-card">
+      <span class="label">Long — full bio</span>
+      <p>Vipul Kella, MD has spent nineteen years practicing emergency medicine while building a parallel career in health-tech investing and operating. Rather than leaving clinical practice behind, he expanded where his clinical lens gets applied — into deal flow, company diligence, and event curation.</p>
+      <p style="margin-top:14px;">He founded Health Nexus Partners on a simple observation: healthcare's biggest decisions happen between the wrong people. Physicians rarely get access to capital networks. Investors rarely get a clinical reality check before writing a check. Policymakers sit outside both conversations. Health Nexus Partners exists to put physicians, investors, founders, and policymakers in the same room — through curated dinners, flagship conferences like Women's Health Nexus, and SPVs vetted through direct clinical and operating experience.</p>
+      <p style="margin-top:14px;">Vipul speaks and writes from the intersection of three lenses: clinical ("does this change what I do with a patient?"), capital ("is money flowing to the right problem?"), and operator ("who needs to be in the room for this to move?"). He continues to practice emergency medicine.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--cream-light);">
+  <div class="wrap">
+    <h2 class="section-title">Fast facts</h2>
+    <div class="facts-grid">
+      <div class="fact"><span class="k">Role</span><span class="v">Founder, Health Nexus Partners</span></div>
+      <div class="fact"><span class="k">Clinical</span><span class="v">Practicing Emergency Medicine physician, 19+ years</span></div>
+      <div class="fact"><span class="k">Investing</span><span class="v">Physician-led SPVs; general partner standing in healthcare venture capital</span></div>
+      <div class="fact"><span class="k">Events</span><span class="v">Founder &amp; host, Women's Health Nexus (flagship annual conference)</span></div>
+      <div class="fact"><span class="k">Based</span><span class="v">Washington, DC area</span></div>
+      <div class="fact"><span class="k">Core thesis</span><span class="v">Healthcare has a translation problem, not an innovation problem</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="section-title">Headshot &amp; logo assets</h2>
+    <div class="asset-grid">
+      <div class="asset-card">
+        <div class="asset-preview"><img src="../assets/images/vipul/founder-portrait.jpg" alt="Vipul Kella headshot"></div>
+        <div class="asset-body">
+          <span class="name">Headshot</span>
+          <span class="meta">JPG</span>
+          <a href="../assets/images/vipul/founder-portrait.jpg" download class="btn btn-dl btn-sm">Download</a>
+        </div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview"><img src="../assets/images/vipul/vk-mark-color.png" alt="Vipul Kella monogram, full color"></div>
+        <div class="asset-body">
+          <span class="name">Monogram — full color</span>
+          <span class="meta">PNG, for light backgrounds</span>
+          <a href="../assets/images/vipul/vk-mark-color.png" download class="btn btn-dl btn-sm">Download</a>
+        </div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview dark"><img src="../assets/images/vipul/vk-mark-cream.png" alt="Vipul Kella monogram, cream on navy"></div>
+        <div class="asset-body">
+          <span class="name">Monogram — reversed</span>
+          <span class="meta">PNG, for dark backgrounds</span>
+          <a href="../assets/images/vipul/vk-mark-cream.png" download class="btn btn-dl btn-sm">Download</a>
+        </div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview"><img class="tall" src="../assets/images/vipul/vk-logo-horizontal-color.png" alt="Vipul Kella logo lockup, full color"></div>
+        <div class="asset-body">
+          <span class="name">Logo lockup — full color</span>
+          <span class="meta">PNG, for light backgrounds</span>
+          <a href="../assets/images/vipul/vk-logo-horizontal-color.png" download class="btn btn-dl btn-sm">Download</a>
+        </div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview dark"><img class="tall" src="../assets/images/vipul/vk-logo-horizontal-cream.png" alt="Vipul Kella logo lockup, reversed"></div>
+        <div class="asset-body">
+          <span class="name">Logo lockup — reversed</span>
+          <span class="meta">PNG, for dark backgrounds</span>
+          <a href="../assets/images/vipul/vk-logo-horizontal-cream.png" download class="btn btn-dl btn-sm">Download</a>
+        </div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-preview"><img src="../assets/images/vipul/vk-mark-navy.png" alt="Vipul Kella monogram, navy on cream"></div>
+        <div class="asset-body">
+          <span class="name">Monogram — monochrome</span>
+          <span class="meta">PNG, navy on cream</span>
+          <a href="../assets/images/vipul/vk-mark-navy.png" download class="btn btn-dl btn-sm">Download</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--navy); color:var(--cream-light); text-align:center;">
+  <div class="wrap">
+    <h2 style="font-family:var(--ff-display); font-size:clamp(24px,3.2vw,32px); color:#fdfaf3; margin-bottom:14px;">Press inquiries</h2>
+    <p style="color:rgba(235,223,205,.8); max-width:48ch; margin:0 auto 26px; font-size:15.5px;">For interviews, quotes, or additional assets, reach out directly.</p>
+    <a href="../contact/" class="btn" style="background:var(--saffron); color:var(--cream-light);">Contact</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="../" class="brand">
+          <img src="../assets/images/isotype-cream.png" alt="Health Nexus Partners mark" style="height:26px;">
+          <span>Health Nexus Partners</span>
+        </a>
+        <p class="tagline">The platform where health, capital, and policy meet.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="../#what-we-do">What We Do</a>
+        <a href="../#who-its-for">Who It's For</a>
+        <a href="../#find-your-room">Find Your Room</a>
+        <a href="/whn/" target="_blank" rel="noopener">Women's Health Nexus</a>
+      </div>
+      <div class="footer-col">
+        <h4>Vipul Kella</h4>
+        <a href="../about/">About</a>
+        <a href="../speaking/">Speaking</a>
+        <a href="./">Press &amp; Media</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="../contact/">Contact</a>
+        <a href="https://www.linkedin.com/in/vipulkella/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://thetranslationnexus.substack.com" target="_blank" rel="noopener">Substack</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Health Nexus Partners</div>
+  </div>
+</footer>
+
+</body>
+</html>
