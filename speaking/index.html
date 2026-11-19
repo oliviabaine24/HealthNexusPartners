@@ -3,26 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Health Nexus Partners</title>
-<meta name="description" content="Health Nexus Partners is the platform where physicians, investors, founders, and policymakers work through healthcare's hardest problems together.">
+<title>Vipul Kella — Speaking</title>
+<meta name="description" content="Speaking topics from Vipul Kella — emergency physician, investor, and founder of Health Nexus Partners — on translation, capital, and physicians building beyond the bedside.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#0C3644;        /* Dark Turquoise 10% */
-    --aqua:#0A7A99;        /* Aqua Blue 25% — official brand color */
-    --cream:#EBDFCD;       /* Bone 30% */
-    --cream-light:#FCF7F2; /* Light Cream 40% */
-    --saffron:#D88044;     /* Saffron 10% */
-    --saffron-deep:#B96B2E;
-    --ink:#0C3644;
-    --line: rgba(12,54,68,0.12);
-    --line-onnavy: rgba(235,223,205,0.18);
-    --radius:10px;
-    --shadow:0 24px 60px -24px rgba(13,47,54,0.4);
-    --ff-display:'PT Serif', Georgia, serif;
-    --ff-body:'Outfit', -apple-system, sans-serif;
+    --navy:#0C3644; --aqua:#0A7A99; --cream:#EBDFCD; --cream-light:#FCF7F2;
+    --saffron:#D88044; --saffron-deep:#B96B2E; --ink:#0C3644;
+    --line: rgba(12,54,68,0.12); --line-onnavy: rgba(235,223,205,0.18);
+    --radius:10px; --shadow:0 24px 60px -24px rgba(13,47,54,0.4);
+    --ff-display:'PT Serif', Georgia, serif; --ff-body:'Outfit', -apple-system, sans-serif;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
@@ -30,7 +22,7 @@
   img{max-width:100%; display:block;}
   a{color:inherit; text-decoration:none;}
   h1,h2,h3{font-family:var(--ff-display); line-height:1.15;}
-  .wrap{max-width:1200px; margin:0 auto; padding:0 32px;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 32px;}
   @media (max-width:640px){ .wrap{padding:0 22px;} }
   section{padding:100px 0;}
   @media (max-width:760px){ section{padding:64px 0;} }
@@ -40,89 +32,36 @@
   .btn-primary:hover{transform:translateY(-1px); box-shadow:0 14px 28px -12px rgba(216,128,68,.55);}
   .btn-outline{border:1.5px solid var(--line-onnavy); color:var(--cream-light);}
   .btn-outline:hover{background:rgba(235,223,205,.08);}
-  .btn-outline-dark{border:1.5px solid var(--line); color:var(--navy);}
-  .btn-outline-dark:hover{background:rgba(12,54,68,.05);}
 
-  /* ===== Nav ===== */
   header{position:sticky; top:0; z-index:50; background:var(--navy); border-bottom:1px solid var(--line-onnavy);}
   nav.wrap{display:flex; align-items:center; justify-content:space-between; height:84px; gap:16px;}
   .brand{display:flex; align-items:center; gap:12px; flex-shrink:0;}
   .brand img{height:30px; width:auto;}
-  .brand span{font-family:var(--ff-body); font-weight:700; letter-spacing:.06em; font-size:16px; color:var(--cream-light); text-transform:uppercase; white-space:nowrap;}
-  .nav-right{display:flex; align-items:center; gap:30px;}
+  .brand span{font-weight:700; letter-spacing:.06em; font-size:16px; color:var(--cream-light); text-transform:uppercase; white-space:nowrap;}
   .nav-links{display:flex; align-items:center; gap:26px;}
   .nav-links a{font-size:14.5px; font-weight:500; color:var(--cream); opacity:.9; white-space:nowrap;}
   .nav-links a:hover{opacity:1; color:var(--cream-light);}
-  .nav-cta{display:flex; align-items:center; gap:12px; flex-shrink:0;}
-  .nav-cta .btn{padding:10px 20px; font-size:14px; white-space:nowrap;}
-  .nav-toggle{display:none; align-items:center; justify-content:center; width:40px; height:40px; background:none; border:none; cursor:pointer; flex-shrink:0; padding:0;}
-  .nav-toggle span{display:block; width:22px; height:2px; background:var(--cream-light); position:relative; transition:background .15s ease;}
-  .nav-toggle span::before,.nav-toggle span::after{content:''; position:absolute; left:0; width:22px; height:2px; background:var(--cream-light); transition:transform .2s ease, top .2s ease;}
-  .nav-toggle span::before{top:-7px;}
-  .nav-toggle span::after{top:7px;}
-  header.open .nav-toggle span{background:transparent;}
-  header.open .nav-toggle span::before{top:0; transform:rotate(45deg);}
-  header.open .nav-toggle span::after{top:0; transform:rotate(-45deg);}
 
-  @media (max-width:900px){
-    .nav-right{display:none; position:absolute; top:84px; left:0; right:0; background:var(--navy); border-bottom:1px solid var(--line-onnavy); flex-direction:column; align-items:stretch; gap:0; padding:8px 0 24px; box-shadow:0 20px 40px -20px rgba(0,0,0,.4);}
-    header.open .nav-right{display:flex;}
-    .nav-links{flex-direction:column; align-items:stretch; gap:0;}
-    .nav-links a{padding:14px 32px; border-top:1px solid var(--line-onnavy); opacity:1;}
-    .nav-cta{flex-direction:column; align-items:stretch; gap:10px; padding:18px 32px 0;}
-    .nav-cta .btn{justify-content:center;}
-    .nav-toggle{display:flex;}
-  }
+  .vk-hero{background:var(--navy); color:var(--cream-light); padding:90px 0 60px; text-align:center;}
+  .vk-hero h1{font-size:clamp(30px,4.4vw,46px); margin:16px auto 16px; max-width:20ch;}
+  .vk-hero p{font-size:17px; color:var(--cream); max-width:56ch; margin:0 auto;}
 
-  /* ===== Hero ===== */
-  .hero{background:var(--navy); color:var(--cream-light); padding:110px 0 90px;}
-  .hero h1{font-size:clamp(34px,5vw,56px); font-weight:700; max-width:16ch; margin-bottom:26px;}
-  .hero p.lead{font-size:19px; color:var(--cream); max-width:56ch; line-height:1.65; margin-bottom:40px;}
-  .hero .cta-row{display:flex; gap:16px; flex-wrap:wrap;}
+  h2.section-title{font-size:clamp(26px,3.4vw,36px); color:var(--navy); max-width:24ch; margin-bottom:12px;}
+  .section-sub{color:rgba(12,54,68,.65); font-size:15.5px; max-width:60ch; margin-bottom:44px;}
 
-  /* ===== What HNP Does ===== */
-  .pillars{display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:48px;}
-  @media (max-width:860px){ .pillars{grid-template-columns:1fr;} }
-  .pillar{background:var(--cream-light); border:1px solid var(--line); border-radius:var(--radius); padding:34px 30px;}
-  .pillar h3{font-size:21px; margin-bottom:14px; color:var(--navy);}
-  .pillar p{font-size:15.5px; color:rgba(12,54,68,.82);}
-  h2.section-title{font-size:clamp(26px,3.4vw,36px); color:var(--navy); max-width:20ch;}
+  .topic-list{display:flex; flex-direction:column; gap:22px;}
+  .topic{background:var(--cream-light); border:1px solid var(--line); border-radius:var(--radius); padding:36px 34px;}
+  .topic .num{font-family:var(--ff-display); font-size:13px; color:var(--saffron-deep); font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:12px; display:block;}
+  .topic h3{font-size:23px; color:var(--navy); margin-bottom:14px;}
+  .topic .lede{font-family:var(--ff-display); font-style:italic; font-size:17px; color:rgba(12,54,68,.8); margin-bottom:18px; max-width:62ch;}
+  .topic ul{list-style:none; display:flex; flex-direction:column; gap:10px;}
+  .topic li{font-size:14.5px; color:rgba(12,54,68,.75); padding-left:18px; position:relative;}
+  .topic li::before{content:"—"; position:absolute; left:0; color:var(--saffron);}
 
-  /* ===== Who It's For (4 cards) ===== */
-  .audience-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:24px; margin-top:48px;}
-  @media (max-width:980px){ .audience-grid{grid-template-columns:1fr 1fr;} }
-  @media (max-width:560px){ .audience-grid{grid-template-columns:1fr;} }
-  .audience-card{background:var(--navy); color:var(--cream-light); border-radius:var(--radius); padding:30px 26px; min-height:220px; display:flex; flex-direction:column; justify-content:space-between;}
-  .audience-card h3{font-family:var(--ff-body); font-weight:600; font-size:17px; margin-bottom:14px; color:var(--cream-light);}
-  .audience-card p{font-size:14.5px; color:var(--cream); line-height:1.6;}
+  .inquire{background:var(--navy); color:var(--cream-light); text-align:center;}
+  .inquire h2{color:#fdfaf3; font-size:clamp(26px,3.6vw,38px); margin-bottom:16px;}
+  .inquire p{color:rgba(235,223,205,.8); max-width:52ch; margin:0 auto 30px; font-size:16px;}
 
-  /* ===== Find Your Room ===== */
-  .room-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:48px;}
-  @media (max-width:900px){ .room-grid{grid-template-columns:1fr;} }
-  .room-card{position:relative; border-radius:var(--radius); overflow:hidden; background:var(--cream-light); border:1px solid var(--line); display:flex; flex-direction:column;}
-  .room-card .room-img{height:180px; background-size:cover; background-position:center;}
-  .room-card .room-body{padding:26px; flex:1; display:flex; flex-direction:column;}
-  .room-card h3{font-size:20px; color:var(--navy); margin-bottom:12px;}
-  .room-card p{font-size:14.5px; color:rgba(12,54,68,.82); flex:1;}
-  .room-status{font-size:13px; font-weight:600; color:var(--aqua); margin-top:16px;}
-  .room-tag{display:inline-block; font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; background:var(--cream); color:var(--saffron-deep); padding:5px 12px; border-radius:999px; margin-top:16px; width:fit-content;}
-  .room-link{margin-top:18px; font-weight:600; color:var(--saffron); font-size:14.5px;}
-  .room-link:hover{text-decoration:underline;}
-
-  /* ===== Founder ===== */
-  .founder{background:var(--cream-light);}
-  .founder-grid{display:grid; grid-template-columns:280px 1fr; gap:52px; align-items:center; margin-top:40px;}
-  @media (max-width:760px){ .founder-grid{grid-template-columns:1fr;} }
-  .founder-grid img{border-radius:var(--radius); box-shadow:var(--shadow);}
-  .founder-grid p{font-size:17px; color:rgba(12,54,68,.85); line-height:1.75; margin-bottom:22px;}
-
-
-  /* ===== Substack ===== */
-  .substack{background:var(--navy); color:var(--cream-light); text-align:center;}
-  .substack h2{color:var(--cream-light); margin-bottom:18px;}
-  .substack p{max-width:48ch; margin:0 auto 32px; font-size:17px; color:var(--cream);}
-
-  /* ===== Footer ===== */
   footer{background:var(--navy); color:var(--cream); padding:64px 0 36px; border-top:1px solid var(--line-onnavy);}
   .footer-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:32px; margin-bottom:40px;}
   footer .brand span{color:var(--cream-light);}
@@ -135,155 +74,75 @@
 </head>
 <body>
 
-<header id="site-header">
+<header>
   <nav class="wrap">
-    <a href="#top" class="brand">
-      <img src="assets/images/isotype-cream.png" alt="Health Nexus Partners mark">
+    <a href="../" class="brand">
+      <img src="../assets/images/isotype-cream.png" alt="Health Nexus Partners mark">
       <span>Health Nexus Partners</span>
     </a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-right">
-      <span></span>
-    </button>
-    <div class="nav-right" id="nav-right">
-      <div class="nav-links">
-        <a href="#what-we-do">What We Do</a>
-        <a href="#who-its-for">Who It's For</a>
-        <a href="#find-your-room">Find Your Room</a>
-        <a href="/sponsor/">Sponsor</a>
-        <a href="#founder">About</a>
-        <a href="#insights">Insights</a>
-      </div>
-      <div class="nav-cta">
-        <a href="/contact/" class="btn btn-outline">Contact</a>
-        <a href="https://luma.com/whn2026" class="btn btn-primary" target="_blank" rel="noopener">Register for WHN</a>
-      </div>
+    <div class="nav-links">
+      <a href="../about/">About Vipul</a>
+      <a href="../press/">Press</a>
+      <a href="../contact/" class="btn btn-outline" style="padding:10px 20px; font-size:14px;">Contact</a>
     </div>
   </nav>
 </header>
-<script>
-  (function(){
-    var header = document.getElementById('site-header');
-    var toggle = document.getElementById('nav-toggle');
-    var panel = document.getElementById('nav-right');
-    toggle.addEventListener('click', function(){
-      var isOpen = header.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-    panel.addEventListener('click', function(e){
-      if(e.target.tagName === 'A'){
-        header.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-  })();
-</script>
 
-<section class="hero" id="top">
+<section class="vk-hero">
   <div class="wrap">
-    <h1>The room where healthcare's hardest problems get worked through.</h1>
-    <p class="lead">Physicians, investors, founders, and policymakers, in the same conversation, working through problems that don't get solved anywhere else.</p>
-    <div class="cta-row">
-      <a href="#what-we-do" class="btn btn-primary">What We Do</a>
-      <a href="/whn/" class="btn btn-outline" target="_blank" rel="noopener">Women's Health Nexus</a>
-    </div>
+    <span class="tag" style="color:var(--saffron);">Speaking</span>
+    <h1>Three arguments, one physician who lives in all three rooms.</h1>
+    <p>Vipul speaks from the intersection of clinical practice, capital, and operating — not as a generalist commentator, but as someone making these decisions directly, every week.</p>
   </div>
 </section>
 
-<section id="what-we-do">
+<section>
   <div class="wrap">
-    <h2 class="section-title">Three connected ways to work with us.</h2>
-    <div class="pillars">
-      <div class="pillar">
-        <h3>Community &amp; Events</h3>
-        <p>Women's Health Nexus and curated gatherings throughout the year. Physicians, founders, investors, and policymakers in the same room, working through what's actually broken.</p>
-      </div>
-      <div class="pillar">
-        <h3>Advisory</h3>
-        <p>Clinical strategy and go-to-market support for health-tech companies, grounded in direct emergency-medicine experience. We tell you where your product works in practice, and where it breaks down.</p>
-      </div>
-      <div class="pillar">
-        <h3>Capital &amp; SPV Access</h3>
-        <p>Deal flow and co-investment opportunities surfaced through the rooms we run, vetted through direct clinical and operating experience before they reach investors.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <h2 class="section-title">Topics</h2>
+    <p class="section-sub">Each talk is built to be adapted to the room — a keynote, a fireside chat, or a panel seat. Topics below are starting points, not fixed scripts.</p>
 
-<section id="who-its-for" style="background:var(--cream-light);">
-  <div class="wrap">
-    <h2 class="section-title">Four doors into the same room.</h2>
-    <div class="audience-grid">
-      <div class="audience-card">
-        <h3>Physicians &amp; Clinicians</h3>
-        <p>Clinical experience opens doors you won't find through hospital channels. Invest in SPVs alongside other physicians, or get access to deal flow through our events.</p>
+    <div class="topic-list">
+      <div class="topic">
+        <span class="num">Topic 01 · The Translation Gap</span>
+        <h3>Why good health technology fails at the bedside</h3>
+        <p class="lede">"Most health tech dies between the demo and the patient. Not because it doesn't work, but because nobody translated it for the people who'd actually use it."</p>
+        <ul>
+          <li>Why devices and wearables generate data nobody acts on clinically</li>
+          <li>The real gap is adoption and commercialization, not invention</li>
+          <li>How to run due diligence from an operational and clinical perspective, not a pitch deck</li>
+        </ul>
       </div>
-      <div class="audience-card">
-        <h3>Founders &amp; Operators</h3>
-        <p>Pitch at an investment dinner. Get a clinical read on whether your product holds up in practice, from someone who's still in the room where it gets used.</p>
+
+      <div class="topic">
+        <span class="num">Topic 02 · Where Capital Should Actually Flow</span>
+        <h3>A clinician's case for redirecting healthcare investment</h3>
+        <p class="lede">"Most healthcare capital chases the wrong problems. It flows toward what sounds fundable, not what a physician would tell you actually needs fixing."</p>
+        <ul>
+          <li>Why physicians lack access to deal flow — and investors lack a clinical reality check</li>
+          <li>The SPV model as proof: clinical vetting before capital, not after</li>
+          <li>Case for underfunded territory: women's cardiovascular disease, chronic disease, rural access</li>
+        </ul>
       </div>
-      <div class="audience-card">
-        <h3>Investors &amp; Capital</h3>
-        <p>Co-invest in SPVs vetted through direct clinical and operating experience. Sponsor an event for ongoing access to the room, not a one-time logo.</p>
-      </div>
-      <div class="audience-card">
-        <h3>Policy &amp; Regulatory</h3>
-        <p>Connect directly with the clinical and capital sides of healthcare decisions. Join the conversation at our events, or contribute to policy work grounded in practice, not theory.</p>
+
+      <div class="topic">
+        <span class="num">Topic 03 · The Physician Who Stayed in the Fight</span>
+        <h3>Why clinicians should build, not just practice</h3>
+        <p class="lede">"Physicians see the problems first. But the system keeps them at the bedside instead of at the table where solutions get funded, built, and regulated."</p>
+        <ul>
+          <li>His own path: clinical practice to investor to operator, without leaving medicine</li>
+          <li>How physicians break into advisory, board, and fractional roles</li>
+          <li>Why a physician's network is a career asset, not a side project</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section id="find-your-room">
+<section class="inquire">
   <div class="wrap">
-    <h2 class="section-title">Find Your Room</h2>
-    <div class="room-grid">
-      <a href="/whn/" class="room-card" style="text-decoration:none;" target="_blank" rel="noopener">
-        <div class="room-img" style="background-image:url('assets/images/whn-panel.jpg');"></div>
-        <div class="room-body">
-          <h3>Women's Health Nexus</h3>
-          <p>Cardiovascular disease, oncology, diagnostics, and the policy decisions behind them, worked through by physicians, investors, and founders in the same room.</p>
-          <div class="room-status">Nov 5 &middot; Congressional Country Club, Bethesda, MD</div>
-          <div class="room-link">View event details &rarr;</div>
-        </div>
-      </a>
-      <div class="room-card">
-        <div class="room-img" style="background-image:url('assets/images/investors-session.jpg');"></div>
-        <div class="room-body">
-          <h3>Performance &amp; Sports Tech</h3>
-          <p>Wearables, biomarkers, and performance data, evaluated by people who've used them on real patients and real athletes, not just read the spec sheet.</p>
-          <span class="room-tag">Coming 2027</span>
-        </div>
-      </div>
-      <div class="room-card">
-        <div class="room-img" style="background-image:url('assets/images/strategy-session.jpg');"></div>
-        <div class="room-body">
-          <h3>Longevity &amp; Preventative Health</h3>
-          <p>Preventative care, cardiovascular disease, and chronic disease, covered with the same clinical scrutiny as everything else here.</p>
-          <span class="room-tag">Coming 2027</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="founder" id="founder">
-  <div class="wrap">
-    <div class="founder-grid">
-      <img src="assets/images/founder-portrait.jpg" alt="Vipul Kella, Founder of Health Nexus Partners">
-      <div>
-        <h2 class="section-title" style="margin-bottom:22px;">Meet the Founder</h2>
-        <p>Vipul Kella has spent nineteen years practicing emergency medicine while building a parallel career in health-tech investing and operating. He founded Health Nexus Partners to close the distance between clinical practice, capital, and company building. Three worlds that rarely talk to each other.</p>
-        <a href="https://www.linkedin.com/in/vipulkella/" class="btn btn-outline-dark" target="_blank" rel="noopener">Connect with Vipul &rarr;</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="substack" id="insights">
-  <div class="wrap">
-    <h2>The Translation Nexus</h2>
-    <p>Notes from the rooms we curate, the deals we vet, and what's actually happening at the intersection of health, capital, and policy.</p>
-    <a href="https://thetranslationnexus.substack.com" class="btn btn-primary" target="_blank" rel="noopener">Read on Substack &rarr;</a>
+    <h2>Bring him into the room.</h2>
+    <p>For speaking inquiries — conferences, podcasts, panels, or internal talks — reach out directly.</p>
+    <a href="../contact/" class="btn btn-primary">Speaking Inquiry</a>
   </div>
 </section>
 
@@ -291,29 +150,29 @@
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <a href="#top" class="brand">
-          <img src="assets/images/isotype-cream.png" alt="Health Nexus Partners mark" style="height:26px;">
+        <a href="../" class="brand">
+          <img src="../assets/images/isotype-cream.png" alt="Health Nexus Partners mark" style="height:26px;">
           <span>Health Nexus Partners</span>
         </a>
         <p class="tagline">The platform where health, capital, and policy meet.</p>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
-        <a href="#what-we-do">What We Do</a>
-        <a href="#who-its-for">Who It's For</a>
-        <a href="#find-your-room">Find Your Room</a>
-        <a href="/sponsor/">Sponsor</a>
+        <a href="../#what-we-do">What We Do</a>
+        <a href="../#who-its-for">Who It's For</a>
+        <a href="../#find-your-room">Find Your Room</a>
+        <a href="../sponsor/">Sponsor</a>
         <a href="/whn/" target="_blank" rel="noopener">Women's Health Nexus</a>
       </div>
       <div class="footer-col">
         <h4>Vipul Kella</h4>
-        <a href="/about/">About</a>
-        <a href="/speaking/">Speaking</a>
-        <a href="/press/">Press &amp; Media</a>
+        <a href="../about/">About</a>
+        <a href="./">Speaking</a>
+        <a href="../press/">Press &amp; Media</a>
       </div>
       <div class="footer-col">
         <h4>Connect</h4>
-        <a href="/contact/">Contact</a>
+        <a href="../contact/">Contact</a>
         <a href="https://www.linkedin.com/in/vipulkella/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://thetranslationnexus.substack.com" target="_blank" rel="noopener">Substack</a>
       </div>
