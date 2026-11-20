@@ -90,7 +90,8 @@
   }
 
   /* ===== Hero ===== */
-  .hero{background:var(--navy); color:var(--cream-light); padding:110px 0 90px;}
+  .hero{background:linear-gradient(100deg, rgba(12,54,68,.96) 0%, rgba(12,54,68,.9) 38%, rgba(12,54,68,.58) 100%), url('assets/images/hero-room.jpg') center/cover no-repeat; color:var(--cream-light); padding:110px 0 90px;}
+  @media (max-width:760px){ .hero{background:linear-gradient(180deg, rgba(12,54,68,.94) 0%, rgba(12,54,68,.94) 60%, rgba(12,54,68,.8) 100%), url('assets/images/hero-room.jpg') center/cover no-repeat;} }
   .hero h1{font-size:clamp(34px,5vw,56px); font-weight:700; max-width:16ch; margin-bottom:26px;}
   .hero p.lead{font-size:19px; color:var(--cream); max-width:56ch; line-height:1.65; margin-bottom:40px;}
   .hero .cta-row{display:flex; gap:16px; flex-wrap:wrap;}
@@ -98,7 +99,9 @@
   /* ===== What HNP Does ===== */
   .pillars{display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:48px;}
   @media (max-width:860px){ .pillars{grid-template-columns:1fr;} }
-  .pillar{background:var(--cream-light); border:1px solid var(--line); border-radius:var(--radius); padding:34px 30px;}
+  .pillar{background:var(--cream-light); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;}
+  .pillar .pillar-img{height:220px; background-size:cover; background-position:center;}
+  .pillar .pillar-body{padding:28px 30px 34px;}
   .pillar h3{font-size:21px; margin-bottom:14px; color:var(--navy);}
   .pillar p{font-size:15.5px; color:rgba(12,54,68,.82);}
   h2.section-title{font-size:clamp(26px,3.4vw,36px); color:var(--navy); max-width:20ch;}
@@ -237,16 +240,25 @@
     <h2 class="section-title">Three connected ways to work with us.</h2>
     <div class="pillars">
       <div class="pillar">
-        <h3>Community &amp; Events</h3>
-        <p>Women's Health Nexus and curated gatherings throughout the year. Physicians, founders, investors, and policymakers in the same room, working through what's actually broken.</p>
+        <div class="pillar-img" style="background-image:url('assets/images/pillar-community.jpg');"></div>
+        <div class="pillar-body">
+          <h3>Community &amp; Events</h3>
+          <p>Women's Health Nexus and curated gatherings throughout the year. Physicians, founders, investors, and policymakers in the same room, working through what's actually broken.</p>
+        </div>
       </div>
       <div class="pillar">
-        <h3>Advisory</h3>
-        <p>Clinical strategy and go-to-market support for health-tech companies, grounded in direct emergency-medicine experience. We tell you where your product works in practice, and where it breaks down.</p>
+        <div class="pillar-img" style="background-image:url('assets/images/pillar-advisory.jpg');"></div>
+        <div class="pillar-body">
+          <h3>Advisory</h3>
+          <p>Clinical strategy and go-to-market support for health-tech companies, grounded in direct emergency-medicine experience. We tell you where your product works in practice, and where it breaks down.</p>
+        </div>
       </div>
       <div class="pillar">
-        <h3>Capital &amp; SPV Access</h3>
-        <p>Deal flow and co-investment opportunities surfaced through the rooms we run, vetted through direct clinical and operating experience before they reach investors.</p>
+        <div class="pillar-img" style="background-image:url('assets/images/pillar-capital.jpg');"></div>
+        <div class="pillar-body">
+          <h3>Capital &amp; SPV Access</h3>
+          <p>Deal flow and co-investment opportunities surfaced through the rooms we run, vetted through direct clinical and operating experience before they reach investors.</p>
+        </div>
       </div>
     </div>
   </div>
