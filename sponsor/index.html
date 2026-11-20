@@ -159,6 +159,11 @@
   .footer-col a{display:block; font-size:14.5px; color:var(--cream); opacity:.85; margin-bottom:8px;}
   .footer-col a:hover{opacity:1;}
   .footer-bottom{border-top:1px solid var(--line-onnavy); padding-top:24px; font-size:13px; color:var(--cream); opacity:.65;}
+  html{scroll-padding-top:100px;}
+  .form-card{max-width:720px; margin:0 auto; background:#fff; border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:8px; text-align:left;}
+  .form-card iframe{display:block; width:100%; border:none; border-radius:8px;}
+  .embed-section{background:var(--cream-light); text-align:center;}
+  .embed-section h2{margin-bottom:12px;} .embed-section p{max-width:54ch; margin:0 auto 28px;}
 </style>
 </head>
 <body>
@@ -411,7 +416,7 @@
           <li>Networking access</li>
           <li>2 event passes (table sponsor)</li>
         </ul>
-        <a href="../contact/" class="btn btn-outline" style="border-color:var(--line); color:var(--navy);">Inquire</a>
+        <a href="#inquire" class="btn btn-outline" style="border-color:var(--line); color:var(--navy);">Inquire</a>
       </div>
       <div class="tier" style="opacity:.9;">
         <h3>Innovation Partner</h3>
@@ -423,7 +428,7 @@
           <li>5 event passes</li>
           <li>VIP Investor Brunch access</li>
         </ul>
-        <a href="../contact/" class="btn btn-outline" style="border-color:var(--line); color:var(--navy);">Inquire</a>
+        <a href="#inquire" class="btn btn-outline" style="border-color:var(--line); color:var(--navy);">Inquire</a>
       </div>
       <div class="tier featured">
         <span class="pill">Where most partners land</span>
@@ -437,18 +442,18 @@
           <li>10 event passes</li>
           <li>VIP Investor Brunch access</li>
         </ul>
-        <a href="../contact/" class="btn btn-primary">Talk to us</a>
+        <a href="#inquire" class="btn btn-primary">Talk to us</a>
       </div>
     </div>
     <p class="tier-note">Opportunities are limited and secured first-come, first-served. Custom sponsorships (Investor Reception, Speaker Dinner, Innovation Showcase, Executive Lounge, WHN Innovation Awards, Startup Showcase) are available on request.</p>
   </div>
 </section>
 
-<section class="inquire">
+<section class="inquire" id="inquire">
   <div class="wrap">
     <h2>Let's find your tier.</h2>
     <p>Tell us a bit about what you're working on and we'll set up time to walk through fit, pricing, and what's available for the spring event.</p>
-    <a href="../contact/" class="btn btn-primary">Start the conversation</a>
+    <div class="form-card"><iframe src="https://links.doctogrow.com/widget/form/p5KetoqqfZydG9EiLMRb" style="width:100%;height:900px;border:none;border-radius:8px" id="inline-p5KetoqqfZydG9EiLMRb" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="HNP - Sponsor Inquiry" data-height="900" data-layout-iframe-id="inline-p5KetoqqfZydG9EiLMRb" data-form-id="p5KetoqqfZydG9EiLMRb" data-cookie-consent="true" data-cookie-consent-provider="auto" title="HNP - Sponsor Inquiry" data-hnp-form="sponsor"></iframe></div>
   </div>
 </section>
 
@@ -481,5 +486,7 @@
   </div>
 </footer>
 
+<script src="https://links.doctogrow.com/js/form_embed.js"></script>
+<script src="/assets/js/crm.js" defer></script>
 </body>
 </html>

@@ -116,6 +116,11 @@
   .footer-col a{display:block; font-size:14.5px; color:var(--cream); opacity:.85; margin-bottom:8px;}
   .footer-col a:hover{opacity:1;}
   .footer-bottom{border-top:1px solid var(--line-onnavy); padding-top:24px; font-size:13px; color:var(--cream); opacity:.65;}
+  html{scroll-padding-top:100px;}
+  .form-card{max-width:720px; margin:0 auto; background:#fff; border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:8px; text-align:left;}
+  .form-card iframe{display:block; width:100%; border:none; border-radius:8px;}
+  .embed-section{background:var(--cream-light); text-align:center;}
+  .embed-section h2{margin-bottom:12px;} .embed-section p{max-width:54ch; margin:0 auto 28px;}
 </style>
 </head>
 <body>
@@ -197,7 +202,7 @@
     <h1>The next room: Performance &amp; Longevity Nexus.</h1>
     <p>Same model that built Women's Health Nexus — physicians, capital, and policy in one room — applied to preventative, clinical, data-driven longevity. City, agenda, and pricing are still being finalized.</p>
     <div class="hero-actions">
-      <a href="/contact/" class="btn btn-primary">Get on the list</a>
+      <a href="#interest" class="btn btn-primary">Get on the list</a>
       <a href="/recap/" class="btn btn-outline">See how WHN 2026 went</a>
     </div>
   </div>
@@ -248,13 +253,13 @@
   </div>
 </section>
 
-<section class="bridge">
+<section class="bridge" id="interest">
   <div class="wrap">
     <span class="tag">Be first in the room</span>
     <h2>Want in before this goes public?</h2>
     <p>Tell us now — as a sponsor, a speaker, or just someone who wants to be in the room — and we'll reach out the moment the details are locked.</p>
-    <div class="bridge-actions">
-      <a href="/contact/" class="btn btn-primary">Get on the list</a>
+    <div class="form-card"><iframe src="https://links.doctogrow.com/widget/form/HXpL14z6qtTM5yEGaohR" style="width:100%;height:820px;border:none;border-radius:8px" id="inline-HXpL14z6qtTM5yEGaohR" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="HNP - Spring Event Interest" data-height="820" data-layout-iframe-id="inline-HXpL14z6qtTM5yEGaohR" data-form-id="HXpL14z6qtTM5yEGaohR" data-cookie-consent="true" data-cookie-consent-provider="auto" title="HNP - Spring Event Interest" data-hnp-form="interest"></iframe></div>
+    <div class="bridge-actions" style="margin-top:28px;">
       <a href="/sponsor/" class="btn btn-outline">Explore partnership</a>
     </div>
   </div>
@@ -289,5 +294,7 @@
   </div>
 </footer>
 
+<script src="https://links.doctogrow.com/js/form_embed.js"></script>
+<script src="/assets/js/crm.js" defer></script>
 </body>
 </html>

@@ -127,6 +127,16 @@
   .footer-col a{display:block; font-size:14.5px; color:var(--cream); opacity:.85; margin-bottom:8px;}
   .footer-col a:hover{opacity:1;}
   .footer-bottom{border-top:1px solid var(--line-onnavy); padding-top:24px; font-size:13px; color:var(--cream); opacity:.65;}
+  html{scroll-padding-top:100px;}
+  .form-card{max-width:720px; margin:0 auto; background:#fff; border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:8px; text-align:left;}
+  .form-card iframe{display:block; width:100%; border:none; border-radius:8px;}
+  .embed-section{background:var(--cream-light); text-align:center;}
+  .embed-section h2{margin-bottom:12px;} .embed-section p{max-width:54ch; margin:0 auto 28px;}
+  .report-feature{display:grid; grid-template-columns:220px 1fr; gap:36px; align-items:center; background:#fff; border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:36px; margin-bottom:44px;}
+  @media (max-width:700px){ .report-feature{grid-template-columns:1fr; text-align:center;} .report-feature img{margin:0 auto; max-width:200px;} }
+  .report-feature img{width:100%; border-radius:8px; box-shadow:0 14px 30px -14px rgba(13,47,54,.4);}
+  .report-feature h3{font-size:clamp(20px,2.4vw,26px); margin:10px 0 12px;}
+  .report-feature p{font-size:15px; color:var(--navy); opacity:.8; margin-bottom:20px;}
 </style>
 </head>
 <body>
@@ -213,41 +223,25 @@
 <section class="substack-band">
   <div class="wrap">
     <div class="substack-card">
-      <span class="tag">Vipul's weekly notes</span>
+      <span class="tag">Vipul's monthly notes</span>
       <h2>The long-form stuff lives on Substack.</h2>
-      <p>Clinical-to-capital translation, where investment should actually flow, and what happens in the rooms Health Nexus Partners builds — once a week, in Vipul's own voice.</p>
+      <p>Clinical-to-capital translation, where investment should actually flow, and what happens in the rooms Health Nexus Partners builds — once a month, in Vipul's own voice.</p>
       <a href="https://thetranslationnexus.substack.com" target="_blank" rel="noopener" class="btn btn-primary">Read on Substack</a>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap data-grid">
-    <div class="bar-chart-card">
-      <h3>What the WHN 2026 room cared about</h3>
-      <div class="bar-row"><div class="lbl">Healthtech</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="val">115</div></div>
-      <div class="bar-row"><div class="lbl">Networking</div><div class="track"><div class="fill" style="width:96%"></div></div><div class="val">111</div></div>
-      <div class="bar-row"><div class="lbl">Entrepreneurship</div><div class="track"><div class="fill" style="width:87%"></div></div><div class="val">100</div></div>
-      <div class="bar-row"><div class="lbl">Startup</div><div class="track"><div class="fill" style="width:73%"></div></div><div class="val">84</div></div>
-      <div class="bar-row"><div class="lbl">Policy</div><div class="track"><div class="fill" style="width:68%"></div></div><div class="val">78</div></div>
-      <div class="bar-row"><div class="lbl">Government</div><div class="track"><div class="fill" style="width:65%"></div></div><div class="val">75</div></div>
-    </div>
-    <div>
-      <span class="tag">Data from the room</span>
-      <h2 style="font-size:clamp(22px,2.8vw,30px); margin:12px 0 16px;">Real numbers, not vibes.</h2>
-      <p style="font-size:15px; color:var(--navy); opacity:.8; margin-bottom:24px;">Every HNP room generates real attendance and interest data. Here's a look at what we measured coming out of Women's Health Nexus 2026 — the same numbers behind the sponsor and recap pages.</p>
-      <div class="stat-mini-grid">
-        <div class="stat-mini"><div class="num">175</div><div class="lbl">Checked in</div></div>
-        <div class="stat-mini"><div class="num">137</div><div class="lbl">Companies</div></div>
-        <div class="stat-mini"><div class="num">67%</div><div class="lbl">Women in the room</div></div>
-        <div class="stat-mini"><div class="num">5</div><div class="lbl">Sessions</div></div>
-      </div>
     </div>
   </div>
 </section>
 
 <section class="papers-band">
   <div class="wrap">
+    <div class="report-feature">
+      <img src="/assets/images/report-cover.jpg" alt="Cover of the Five Trends Shaping Women's Health report">
+      <div>
+        <span class="soon">New report</span>
+        <h3>Five Trends Shaping Women's Health</h3>
+        <p>What a room of physicians, founders, investors and policymakers said about evidence, reimbursement, adoption, AI and prevention, in eight pages with five charts.</p>
+        <a href="#get-resource" data-asset="trends-report" class="btn btn-primary">Get the report</a>
+      </div>
+    </div>
     <div class="section-head">
       <span class="tag">Policy briefs &amp; white papers</span>
       <h2>Outputs the room produces</h2>
@@ -257,20 +251,25 @@
         <span class="soon">Coming soon</span>
         <h3>Where Capital Should Actually Flow</h3>
         <p>A clinician's case for redirecting healthcare investment toward the problems that actually move outcomes.</p>
+        <a href="#get-resource" data-asset="capital-flow" class="btn btn-outline" style="margin-top:16px;">Notify me when it's out</a>
       </div>
       <div class="paper-card">
         <span class="soon">Coming soon</span>
         <h3>The Translation Gap</h3>
         <p>Why good health tech dies between the demo and the patient — and what closes that gap.</p>
+        <a href="#get-resource" data-asset="translation-gap" class="btn btn-outline" style="margin-top:16px;">Notify me when it's out</a>
       </div>
       <div class="paper-card">
         <span class="soon">Coming soon</span>
         <h3>WHN 2026: Policy Brief</h3>
         <p>What the room's physicians, investors, and policy voices agreed needs to change next.</p>
+        <a href="#get-resource" data-asset="policy-brief" class="btn btn-outline" style="margin-top:16px;">Notify me when it's out</a>
       </div>
     </div>
   </div>
 </section>
+
+<section class="embed-section" id="get-resource"><div class="wrap"><span class="tag">Get it first</span><h2>Where should we send it?</h2><p>Leave your details and we will email the report right away. For the three papers below, pick one and we will notify you the moment it is out.</p><div class="form-card"><iframe src="https://links.doctogrow.com/widget/form/K5WQsJ03SlDUdYhYPybb" style="width:100%;height:640px;border:none;border-radius:8px" id="inline-K5WQsJ03SlDUdYhYPybb" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="HNP - Resource Request" data-height="640" data-layout-iframe-id="inline-K5WQsJ03SlDUdYhYPybb" data-form-id="K5WQsJ03SlDUdYhYPybb" data-cookie-consent="true" data-cookie-consent-provider="auto" title="HNP - Resource Request" data-hnp-form="resource"></iframe></div></div></section>
 
 <section class="bridge">
   <div class="wrap">
@@ -313,5 +312,7 @@
   </div>
 </footer>
 
+<script src="https://links.doctogrow.com/js/form_embed.js"></script>
+<script src="/assets/js/crm.js" defer></script>
 </body>
 </html>
