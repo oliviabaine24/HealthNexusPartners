@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Health Nexus Partners — Privacy Policy</title>
+<meta name="description" content="Privacy Policy for Health Nexus Partners — what personal information we collect, how we use it, and the choices you have.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0C3644; --aqua:#0A7A99; --cream:#EBDFCD; --cream-light:#FCF7F2;
+    --saffron:#D88044; --saffron-deep:#B96B2E; --ink:#0C3644;
+    --line: rgba(12,54,68,0.12); --line-onnavy: rgba(235,223,205,0.18);
+    --radius:10px; --shadow:0 24px 60px -24px rgba(13,47,54,0.4);
+    --ff-display:'PT Serif', Georgia, serif; --ff-body:'Outfit', -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--ff-body); color:var(--ink); background:var(--cream); line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  h1,h2,h3{font-family:var(--ff-display); line-height:1.15;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 32px;}
+  @media (max-width:640px){ .wrap{padding:0 22px;} }
+  section{padding:100px 0;}
+  @media (max-width:760px){ section{padding:64px 0;} }
+  .tag{font-size:13px; letter-spacing:.14em; text-transform:uppercase; font-weight:600; color:var(--aqua);}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:14px 28px; border-radius:999px; font-weight:600; font-size:15px; transition:transform .15s ease, box-shadow .15s ease;}
+  .btn-primary{background:var(--saffron); color:var(--cream-light);}
+  .btn-primary:hover{transform:translateY(-1px); box-shadow:0 14px 28px -12px rgba(216,128,68,.55);}
+  .btn-outline{border:1.5px solid var(--line-onnavy); color:var(--cream-light);}
+  .btn-outline:hover{background:rgba(235,223,205,.08);}
+  .btn-outline-dark{border:1.5px solid var(--line); color:var(--navy);}
+  .btn-outline-dark:hover{background:rgba(12,54,68,.05);}
+
+  header{position:sticky; top:0; z-index:50; background:var(--navy); border-bottom:1px solid var(--line-onnavy);}
+  nav.wrap{display:flex; align-items:center; justify-content:space-between; height:84px; gap:16px;}
+  .brand{display:flex; align-items:center; gap:12px; flex-shrink:0;}
+  .brand img{height:30px; width:auto;}
+  .brand span{font-weight:700; letter-spacing:.06em; font-size:16px; color:var(--cream-light); text-transform:uppercase; white-space:nowrap;}
+  .nav-right{display:flex; align-items:center; gap:30px;}
+  .nav-links{display:flex; align-items:center; gap:26px;}
+  .nav-links a{font-size:14.5px; font-weight:500; color:var(--cream); opacity:.9; white-space:nowrap;}
+  .nav-links a:hover{opacity:1; color:var(--cream-light);}
+  .nav-links > a{padding:8px 10px;}
+  .nav-item{position:relative;}
+  .nav-item > summary{list-style:none; cursor:pointer; font-size:14.5px; font-weight:500; color:var(--cream); opacity:.9; display:flex; align-items:center; gap:5px; white-space:nowrap; padding:8px 10px; border-radius:6px;}
+  .nav-item > summary::-webkit-details-marker{display:none;}
+  .nav-item > summary::marker{content:'';}
+  .nav-item > summary:hover{opacity:1; color:var(--cream-light);}
+  .nav-item .chev{width:7px; height:7px; border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor; transform:rotate(45deg); transition:transform .15s ease; margin-top:-3px; flex-shrink:0;}
+  .nav-item[open] .chev{transform:rotate(-135deg); margin-top:1px;}
+  .nav-dropdown{position:absolute; top:calc(100% + 10px); left:50%; transform:translateX(-50%); background:var(--navy); border:1px solid var(--line-onnavy); border-radius:10px; padding:8px; min-width:230px; box-shadow:0 20px 40px -16px rgba(0,0,0,.45); z-index:60;}
+  .nav-dropdown a{display:block; padding:10px 14px; font-size:14px; border-radius:6px; color:var(--cream); opacity:.9; white-space:nowrap;}
+  .nav-dropdown a:hover{background:rgba(235,223,205,.08); opacity:1; color:var(--cream-light);}
+  .nav-cta{display:flex; align-items:center; gap:12px; flex-shrink:0;}
+  .nav-cta .btn{padding:10px 20px; font-size:14px; white-space:nowrap;}
+  .nav-toggle{display:none; align-items:center; justify-content:center; width:40px; height:40px; background:none; border:none; cursor:pointer; flex-shrink:0; padding:0;}
+  .nav-toggle span{display:block; width:22px; height:2px; background:var(--cream-light); position:relative; transition:background .15s ease;}
+  .nav-toggle span::before,.nav-toggle span::after{content:''; position:absolute; left:0; width:22px; height:2px; background:var(--cream-light); transition:transform .2s ease, top .2s ease;}
+  .nav-toggle span::before{top:-7px;}
+  .nav-toggle span::after{top:7px;}
+  header.open .nav-toggle span{background:transparent;}
+  header.open .nav-toggle span::before{top:0; transform:rotate(45deg);}
+  header.open .nav-toggle span::after{top:0; transform:rotate(-45deg);}
+
+  @media (max-width:900px){
+    .nav-right{display:none; position:absolute; top:84px; left:0; right:0; background:var(--navy); border-bottom:1px solid var(--line-onnavy); flex-direction:column; align-items:stretch; gap:0; padding:8px 0 24px; box-shadow:0 20px 40px -20px rgba(0,0,0,.4);}
+    header.open .nav-right{display:flex;}
+    .nav-links{flex-direction:column; align-items:stretch; gap:0;}
+    .nav-links a{padding:14px 32px; border-top:1px solid var(--line-onnavy); opacity:1;}
+    .nav-item > summary{padding:14px 32px; border-top:1px solid var(--line-onnavy); opacity:1; justify-content:space-between;}
+    .nav-dropdown{position:static; transform:none; background:rgba(0,0,0,.18); border:none; border-radius:0; padding:0; margin:0; box-shadow:none; min-width:0;}
+    .nav-dropdown a{padding:10px 32px 10px 48px; font-size:14px;}
+    .nav-cta{flex-direction:column; align-items:stretch; gap:10px; padding:18px 32px 0;}
+    .nav-cta .btn{justify-content:center;}
+    .nav-toggle{display:flex;}
+  }
+
+  .legal-hero{background:var(--navy); color:var(--cream-light); padding:70px 0 50px;}
+  .legal-hero h1{font-size:clamp(28px,4vw,42px); margin:14px 0 10px;}
+  .legal-hero p.eff{font-size:14.5px; color:rgba(235,223,205,.75);}
+
+  .legal{max-width:76ch;}
+  .legal h2{font-size:clamp(20px,2.4vw,24px); color:var(--navy); margin:44px 0 16px;}
+  .legal h2:first-child{margin-top:0;}
+  .legal p{font-size:15.5px; color:rgba(12,54,68,.85); margin-bottom:16px;}
+  .legal ul{margin:0 0 16px 22px;}
+  .legal li{font-size:15.5px; color:rgba(12,54,68,.85); margin-bottom:8px;}
+  .legal strong{color:var(--navy);}
+  .legal a{color:var(--aqua); text-decoration:underline;}
+  .legal a:hover{color:var(--saffron-deep);}
+
+  footer{background:var(--navy); color:var(--cream); padding:64px 0 36px; border-top:1px solid var(--line-onnavy);}
+  .footer-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:32px; margin-bottom:40px;}
+  footer .brand span{color:var(--cream-light);}
+  footer p.tagline{margin-top:10px; font-size:14px; color:var(--cream); opacity:.8; max-width:30ch;}
+  .footer-col h4{font-size:13px; text-transform:uppercase; letter-spacing:.1em; color:var(--cream-light); margin-bottom:14px;}
+  .footer-col a{display:block; font-size:14.5px; color:var(--cream); opacity:.85; margin-bottom:8px;}
+  .footer-col a:hover{opacity:1;}
+  .footer-bottom{border-top:1px solid var(--line-onnavy); padding-top:24px; font-size:13px; color:var(--cream); opacity:.65;}
+  .footer-bottom a{opacity:.85;}
+  .footer-bottom a:hover{opacity:1;}
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <nav class="wrap">
+    <a href="../" class="brand">
+      <img src="../assets/images/isotype-cream.png" alt="Health Nexus Partners mark">
+      <span>Health Nexus Partners</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-right">
+      <span></span>
+    </button>
+    <div class="nav-right" id="nav-right">
+      <div class="nav-links">
+        <details class="nav-item">
+          <summary>About <span class="chev"></span></summary>
+          <div class="nav-dropdown">
+            <a href="/about/">Vipul Kella</a>
+            <a href="/#what-we-do">Health Nexus Partners</a>
+          </div>
+        </details>
+        <details class="nav-item">
+          <summary>Find Your Room <span class="chev"></span></summary>
+          <div class="nav-dropdown">
+            <a href="/whn/">Women's Health Nexus</a>
+            <a href="/performance-longevity/">Performance &amp; Longevity Nexus</a>
+          </div>
+        </details>
+        <details class="nav-item">
+          <summary>Work With Us <span class="chev"></span></summary>
+          <div class="nav-dropdown">
+            <a href="/sponsor/">Sponsor</a>
+            <a href="/cohort/">Cohort</a>
+          </div>
+        </details>
+        <a href="/insights/">Insights</a>
+      </div>
+      <div class="nav-cta">
+        <a href="../contact/" class="btn btn-outline">Contact</a>
+        <a href="../recap/" class="btn btn-primary">WHN 2026 Recap</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<script>
+  (function(){
+    var header = document.getElementById('site-header');
+    var toggle = document.getElementById('nav-toggle');
+    var panel = document.getElementById('nav-right');
+    toggle.addEventListener('click', function(){
+      var isOpen = header.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    panel.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        header.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.querySelectorAll('.nav-item').forEach(function(d){
+      d.addEventListener('toggle', function(){
+        if(d.open){
+          document.querySelectorAll('.nav-item').forEach(function(o){ if(o!==d) o.removeAttribute('open'); });
+        }
+      });
+    });
+    document.addEventListener('click', function(e){
+      document.querySelectorAll('.nav-item[open]').forEach(function(d){
+        if(!d.contains(e.target)) d.removeAttribute('open');
+      });
+    });
+  })();
+</script>
+
+<section class="legal-hero">
+  <div class="wrap">
+    <span class="tag" style="color:var(--saffron);">Legal</span>
+    <h1>Privacy Policy</h1>
+    <p class="eff">Effective date: November 20, 2026</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="legal">
+      <p>Health Nexus Partners ("HNP," "we," "us") is a physician-led platform that connects clinical knowledge, capital and policy through events, investment activity, advisory work and a newsletter. This policy explains what personal information we collect through healthnexuspartners.com, our forms, our newsletter and our events, how we use it, and the choices you have. By using our site or submitting a form, you accept this policy.</p>
+
+      <h2>1. What we collect</h2>
+      <p><strong>Information you give us.</strong> When you fill in a form, register for an event, subscribe to our newsletter or contact us, we collect what you enter. This is typically your name, email address, phone number if you give one, company, role, the kind of work you do (founder or operator, physician or clinician, investor, policy or advocacy, or other), your interests, and anything you write in a message or application.</p>
+      <p><strong>Information from your visit.</strong> When you use the site, we record the page you were on when you submitted a form, how you arrived (for example, a link from LinkedIn or our newsletter, shown as a "source" label in the link), and any resource you asked for. Our servers and our hosting provider also see your IP address, browser type and device in the ordinary course of delivering web pages.</p>
+      <p><strong>Information from events.</strong> If you register for or attend one of our events, we receive registration details from our ticketing provider, such as your name, email, ticket type and attendance. We also take photographs and video at our events (see the Terms of Use).</p>
+      <p><strong>Please do not send us patient information.</strong> Do not enter any patient information, protected health information, or any other sensitive personal information about yourself or anyone else into our forms or messages. We do not need it and our forms are not designed to protect it.</p>
+
+      <h2>2. How we use it</h2>
+      <p>We use your information to:</p>
+      <ul>
+        <li>reply to your inquiry and deliver what you asked for, such as a report, an introduction, a sponsor conversation or event information;</li>
+        <li>run and organize our events, including registration, scheduling and follow-up;</li>
+        <li>send you our newsletter and other emails you have asked for or that relate to something you requested, and to keep a record of what we have sent;</li>
+        <li>understand which pages, links and content bring people to us, so we can improve what we publish;</li>
+        <li>keep the site and our systems secure, prevent misuse and meet legal obligations.</li>
+      </ul>
+      <p>We send marketing emails only to people who have asked to hear from us or who have an existing relationship with us, and every marketing email includes a way to unsubscribe.</p>
+
+      <h2>3. Who we share it with</h2>
+      <p>We do not sell your personal information, and we do not use it for targeted advertising on other companies' sites.</p>
+      <p>We share it only in these ways:</p>
+      <ul>
+        <li><strong>Service providers</strong> that help us operate: our customer relationship management and email platform (HighLevel), our newsletter platform (Substack), our event ticketing provider (Luma), and our website hosting provider (GitHub Pages). They may use your information only to provide their services to us and under their own privacy terms.</li>
+        <li><strong>Sponsors, partners and other attendees</strong>, only where you have asked us to or agreed to it. For example, if you ask for an introduction, we share the details needed to make it.</li>
+        <li><strong>Authorities and advisers</strong>, where the law requires it, to enforce our rights, or to our lawyers and accountants under confidentiality obligations.</li>
+        <li><strong>A successor</strong>, if HNP is merged, sold or reorganized. We will tell you if your information becomes subject to a different privacy policy.</li>
+      </ul>
+
+      <h2>4. Cookies and similar technology</h2>
+      <p>Our site and the forms embedded in it may use cookies and similar technology that are needed to display forms, keep them working and record the source label described above. We store that label in your browser for the length of your visit. We do not use advertising cookies or tracking pixels on this site. If that changes, we will update this policy first. You can block or delete cookies in your browser settings, though some forms may not work as a result.</p>
+
+      <h2>5. How long we keep it</h2>
+      <p>We keep your information for as long as we have an active relationship with you or need it for the purposes above, and then for a reasonable period afterward for record keeping, legal and security reasons. If you ask us to delete your information, we will do so unless we are required to keep it.</p>
+
+      <h2>6. Your choices and rights</h2>
+      <p>You can ask us to tell you what personal information we hold about you, to correct it, or to delete it. You can unsubscribe from our emails at any time using the link in any email, and you can ask us to stop contacting you.</p>
+      <p>Depending on where you live, privacy laws may give you additional rights, including the right to access, correct and delete your personal information, to receive a copy of it, to object to or restrict certain uses, and to opt out of the sale or sharing of personal information. As noted above, we do not sell personal information. If you live in the European Economic Area, the United Kingdom or Switzerland, our legal bases for using your information are your consent, our legitimate interest in running our business and organizing our events, and our need to carry out a request you have made, and you may also lodge a complaint with your local data protection authority.</p>
+      <p>To exercise any of these rights, contact us through the form at healthnexuspartners.com/contact/ and tell us what you would like. We may need to confirm who you are before acting on a request, and we will not treat you differently for exercising your rights.</p>
+
+      <h2>7. Security</h2>
+      <p>We use reasonable technical and organizational measures to protect your information, including relying on providers that encrypt data in transit. No method of transmission or storage is completely secure, so we cannot guarantee absolute security.</p>
+
+      <h2>8. Where your information is processed</h2>
+      <p>We and our providers are based in or process information in the United States. If you use our site from another country, your information will be transferred to and processed in the United States, where privacy laws may differ from those where you live.</p>
+
+      <h2>9. Children</h2>
+      <p>Our site and events are for business and professional audiences and are not directed to anyone under 18. We do not knowingly collect personal information from anyone under 18. If you believe we have, contact us and we will delete it.</p>
+
+      <h2>10. Links to other sites</h2>
+      <p>Our site and emails link to sites we do not control, including LinkedIn, Substack and Luma. We are not responsible for their content or privacy practices, and this policy does not apply to them.</p>
+
+      <h2>11. Changes to this policy</h2>
+      <p>We may update this policy from time to time. We will post the new version here with a new effective date, and if the changes are significant we will tell you by email or a notice on the site.</p>
+
+      <h2>12. Contact</h2>
+      <p>Use the form at healthnexuspartners.com/contact/ for any question about this policy or your information.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="../" class="brand">
+          <img src="../assets/images/isotype-cream.png" alt="Health Nexus Partners mark" style="height:26px;">
+          <span>Health Nexus Partners</span>
+        </a>
+        <p class="tagline">The platform where health, capital, and policy meet.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="../#what-we-do">What We Do</a>
+        <a href="../#who-its-for">Who It's For</a>
+        <a href="../#find-your-room">Find Your Room</a>
+        <a href="../sponsor/">Sponsor</a>
+        <a href="/whn/" target="_blank" rel="noopener">Women's Health Nexus</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="../contact/">Contact</a>
+        <a href="https://www.linkedin.com/in/vipulkella/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://thetranslationnexus.substack.com" target="_blank" rel="noopener">Substack</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Health Nexus Partners &nbsp;&middot;&nbsp; <a href="/privacy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="/terms/">Terms</a></div>
+  </div>
+</footer>
+
+<script src="/assets/js/crm.js" defer></script>
+</body>
+</html>

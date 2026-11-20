@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Health Nexus Partners — Terms of Use</title>
+<meta name="description" content="Terms of Use for Health Nexus Partners — the terms that govern use of healthnexuspartners.com, our forms, our newsletter and our content.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0C3644; --aqua:#0A7A99; --cream:#EBDFCD; --cream-light:#FCF7F2;
+    --saffron:#D88044; --saffron-deep:#B96B2E; --ink:#0C3644;
+    --line: rgba(12,54,68,0.12); --line-onnavy: rgba(235,223,205,0.18);
+    --radius:10px; --shadow:0 24px 60px -24px rgba(13,47,54,0.4);
+    --ff-display:'PT Serif', Georgia, serif; --ff-body:'Outfit', -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--ff-body); color:var(--ink); background:var(--cream); line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  h1,h2,h3{font-family:var(--ff-display); line-height:1.15;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 32px;}
+  @media (max-width:640px){ .wrap{padding:0 22px;} }
+  section{padding:100px 0;}
+  @media (max-width:760px){ section{padding:64px 0;} }
+  .tag{font-size:13px; letter-spacing:.14em; text-transform:uppercase; font-weight:600; color:var(--aqua);}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:14px 28px; border-radius:999px; font-weight:600; font-size:15px; transition:transform .15s ease, box-shadow .15s ease;}
+  .btn-primary{background:var(--saffron); color:var(--cream-light);}
+  .btn-primary:hover{transform:translateY(-1px); box-shadow:0 14px 28px -12px rgba(216,128,68,.55);}
+  .btn-outline{border:1.5px solid var(--line-onnavy); color:var(--cream-light);}
+  .btn-outline:hover{background:rgba(235,223,205,.08);}
+  .btn-outline-dark{border:1.5px solid var(--line); color:var(--navy);}
+  .btn-outline-dark:hover{background:rgba(12,54,68,.05);}
+
+  header{position:sticky; top:0; z-index:50; background:var(--navy); border-bottom:1px solid var(--line-onnavy);}
+  nav.wrap{display:flex; align-items:center; justify-content:space-between; height:84px; gap:16px;}
+  .brand{display:flex; align-items:center; gap:12px; flex-shrink:0;}
+  .brand img{height:30px; width:auto;}
+  .brand span{font-weight:700; letter-spacing:.06em; font-size:16px; color:var(--cream-light); text-transform:uppercase; white-space:nowrap;}
+  .nav-right{display:flex; align-items:center; gap:30px;}
+  .nav-links{display:flex; align-items:center; gap:26px;}
+  .nav-links a{font-size:14.5px; font-weight:500; color:var(--cream); opacity:.9; white-space:nowrap;}
+  .nav-links a:hover{opacity:1; color:var(--cream-light);}
+  .nav-links > a{padding:8px 10px;}
+  .nav-item{position:relative;}
+  .nav-item > summary{list-style:none; cursor:pointer; font-size:14.5px; font-weight:500; color:var(--cream); opacity:.9; display:flex; align-items:center; gap:5px; white-space:nowrap; padding:8px 10px; border-radius:6px;}
+  .nav-item > summary::-webkit-details-marker{display:none;}
+  .nav-item > summary::marker{content:'';}
+  .nav-item > summary:hover{opacity:1; color:var(--cream-light);}
+  .nav-item .chev{width:7px; height:7px; border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor; transform:rotate(45deg); transition:transform .15s ease; margin-top:-3px; flex-shrink:0;}
+  .nav-item[open] .chev{transform:rotate(-135deg); margin-top:1px;}
+  .nav-dropdown{position:absolute; top:calc(100% + 10px); left:50%; transform:translateX(-50%); background:var(--navy); border:1px solid var(--line-onnavy); border-radius:10px; padding:8px; min-width:230px; box-shadow:0 20px 40px -16px rgba(0,0,0,.45); z-index:60;}
+  .nav-dropdown a{display:block; padding:10px 14px; font-size:14px; border-radius:6px; color:var(--cream); opacity:.9; white-space:nowrap;}
+  .nav-dropdown a:hover{background:rgba(235,223,205,.08); opacity:1; color:var(--cream-light);}
+  .nav-cta{display:flex; align-items:center; gap:12px; flex-shrink:0;}
+  .nav-cta .btn{padding:10px 20px; font-size:14px; white-space:nowrap;}
+  .nav-toggle{display:none; align-items:center; justify-content:center; width:40px; height:40px; background:none; border:none; cursor:pointer; flex-shrink:0; padding:0;}
+  .nav-toggle span{display:block; width:22px; height:2px; background:var(--cream-light); position:relative; transition:background .15s ease;}
+  .nav-toggle span::before,.nav-toggle span::after{content:''; position:absolute; left:0; width:22px; height:2px; background:var(--cream-light); transition:transform .2s ease, top .2s ease;}
+  .nav-toggle span::before{top:-7px;}
+  .nav-toggle span::after{top:7px;}
+  header.open .nav-toggle span{background:transparent;}
+  header.open .nav-toggle span::before{top:0; transform:rotate(45deg);}
+  header.open .nav-toggle span::after{top:0; transform:rotate(-45deg);}
+
+  @media (max-width:900px){
+    .nav-right{display:none; position:absolute; top:84px; left:0; right:0; background:var(--navy); border-bottom:1px solid var(--line-onnavy); flex-direction:column; align-items:stretch; gap:0; padding:8px 0 24px; box-shadow:0 20px 40px -20px rgba(0,0,0,.4);}
+    header.open .nav-right{display:flex;}
+    .nav-links{flex-direction:column; align-items:stretch; gap:0;}
+    .nav-links a{padding:14px 32px; border-top:1px solid var(--line-onnavy); opacity:1;}
+    .nav-item > summary{padding:14px 32px; border-top:1px solid var(--line-onnavy); opacity:1; justify-content:space-between;}
+    .nav-dropdown{position:static; transform:none; background:rgba(0,0,0,.18); border:none; border-radius:0; padding:0; margin:0; box-shadow:none; min-width:0;}
+    .nav-dropdown a{padding:10px 32px 10px 48px; font-size:14px;}
+    .nav-cta{flex-direction:column; align-items:stretch; gap:10px; padding:18px 32px 0;}
+    .nav-cta .btn{justify-content:center;}
+    .nav-toggle{display:flex;}
+  }
+
+  .legal-hero{background:var(--navy); color:var(--cream-light); padding:70px 0 50px;}
+  .legal-hero h1{font-size:clamp(28px,4vw,42px); margin:14px 0 10px;}
+  .legal-hero p.eff{font-size:14.5px; color:rgba(235,223,205,.75);}
+
+  .legal{max-width:76ch;}
+  .legal h2{font-size:clamp(20px,2.4vw,24px); color:var(--navy); margin:44px 0 16px;}
+  .legal h2:first-child{margin-top:0;}
+  .legal p{font-size:15.5px; color:rgba(12,54,68,.85); margin-bottom:16px;}
+  .legal ul{margin:0 0 16px 22px;}
+  .legal li{font-size:15.5px; color:rgba(12,54,68,.85); margin-bottom:8px;}
+  .legal strong{color:var(--navy);}
+  .legal a{color:var(--aqua); text-decoration:underline;}
+  .legal a:hover{color:var(--saffron-deep);}
+
+  footer{background:var(--navy); color:var(--cream); padding:64px 0 36px; border-top:1px solid var(--line-onnavy);}
+  .footer-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:32px; margin-bottom:40px;}
+  footer .brand span{color:var(--cream-light);}
+  footer p.tagline{margin-top:10px; font-size:14px; color:var(--cream); opacity:.8; max-width:30ch;}
+  .footer-col h4{font-size:13px; text-transform:uppercase; letter-spacing:.1em; color:var(--cream-light); margin-bottom:14px;}
+  .footer-col a{display:block; font-size:14.5px; color:var(--cream); opacity:.85; margin-bottom:8px;}
+  .footer-col a:hover{opacity:1;}
+  .footer-bottom{border-top:1px solid var(--line-onnavy); padding-top:24px; font-size:13px; color:var(--cream); opacity:.65;}
+  .footer-bottom a{opacity:.85;}
+  .footer-bottom a:hover{opacity:1;}
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <nav class="wrap">
+    <a href="../" class="brand">
+      <img src="../assets/images/isotype-cream.png" alt="Health Nexus Partners mark">
+      <span>Health Nexus Partners</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-right">
+      <span></span>
+    </button>
+    <div class="nav-right" id="nav-right">
+      <div class="nav-links">
+        <details class="nav-item">
+          <summary>About <span class="chev"></span></summary>
+          <div class="nav-dropdown">
+            <a href="/about/">Vipul Kella</a>
+            <a href="/#what-we-do">Health Nexus Partners</a>
+          </div>
+        </details>
+        <details class="nav-item">
+          <summary>Find Your Room <span class="chev"></span></summary>
+          <div class="nav-dropdown">
+            <a href="/whn/">Women's Health Nexus</a>
+            <a href="/performance-longevity/">Performance &amp; Longevity Nexus</a>
+          </div>
+        </details>
+        <details class="nav-item">
+          <summary>Work With Us <span class="chev"></span></summary>
+          <div class="nav-dropdown">
+            <a href="/sponsor/">Sponsor</a>
+            <a href="/cohort/">Cohort</a>
+          </div>
+        </details>
+        <a href="/insights/">Insights</a>
+      </div>
+      <div class="nav-cta">
+        <a href="../contact/" class="btn btn-outline">Contact</a>
+        <a href="../recap/" class="btn btn-primary">WHN 2026 Recap</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<script>
+  (function(){
+    var header = document.getElementById('site-header');
+    var toggle = document.getElementById('nav-toggle');
+    var panel = document.getElementById('nav-right');
+    toggle.addEventListener('click', function(){
+      var isOpen = header.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    panel.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        header.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.querySelectorAll('.nav-item').forEach(function(d){
+      d.addEventListener('toggle', function(){
+        if(d.open){
+          document.querySelectorAll('.nav-item').forEach(function(o){ if(o!==d) o.removeAttribute('open'); });
+        }
+      });
+    });
+    document.addEventListener('click', function(e){
+      document.querySelectorAll('.nav-item[open]').forEach(function(d){
+        if(!d.contains(e.target)) d.removeAttribute('open');
+      });
+    });
+  })();
+</script>
+
+<section class="legal-hero">
+  <div class="wrap">
+    <span class="tag" style="color:var(--saffron);">Legal</span>
+    <h1>Terms of Use</h1>
+    <p class="eff">Effective date: November 20, 2026</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="legal">
+      <p>These terms govern your use of healthnexuspartners.com, our forms, our newsletter and any content we publish (together, the "Services"), and they apply together with our Privacy Policy. By using the Services you agree to these terms. If you do not agree, please do not use them. Events, sponsorships, advisory work and investments are governed by their own terms and agreements, described in section 12.</p>
+
+      <h2>1. Who we are</h2>
+      <p>Health Nexus Partners ("HNP," "we," "us") is a physician-led platform that brings together clinicians, founders, investors and policymakers. Women's Health Nexus is an event we run under the HNP name.</p>
+
+      <h2>2. What the Services are, and are not</h2>
+      <p><strong>Information only.</strong> Everything we publish, including reports, articles, newsletters, event content, recordings and speaker remarks, is general information and opinion. It reflects what people said at a particular time, and speakers' statements and figures are their own and have not necessarily been verified by us. We try to be accurate but do not promise that anything is complete, current or error free.</p>
+      <p><strong>Not medical advice.</strong> Nothing in the Services is medical advice, diagnosis or treatment, and nothing creates a doctor-patient relationship. If you have a health concern, talk to a qualified healthcare professional. In an emergency, call your local emergency number.</p>
+      <p><strong>Not investment, legal or tax advice, and not an offer.</strong> Nothing in the Services is investment, legal, tax or accounting advice. Nothing in the Services is an offer to sell, or a solicitation of an offer to buy, any security or investment, and nothing here is a recommendation of any company or deal. Any investment opportunity is made only through formal offering documents to people who are eligible to receive them under applicable law. Talk to your own advisers before making any decision. Past events, results and examples do not predict future outcomes.</p>
+      <p><strong>Views are personal.</strong> Opinions expressed by Dr. Vipul Kella, by guests, speakers and sponsors, and in any content we publish, are their own and not necessarily those of any employer, hospital, fund or organization they are associated with.</p>
+
+      <h2>3. Using the Services</h2>
+      <p>You may use the Services only for lawful purposes and in line with these terms. You agree not to:</p>
+      <ul>
+        <li>break the law or infringe anyone's rights;</li>
+        <li>submit false information or impersonate any person or organization;</li>
+        <li>interfere with, disrupt or attempt to gain unauthorized access to the Services or our systems;</li>
+        <li>use automated tools to copy or harvest content or contact details, or send spam through our forms;</li>
+        <li>use the Services to send anything harmful, defamatory, harassing or unlawful.</li>
+      </ul>
+      <p>Do not submit patient information or any sensitive personal information through the Services.</p>
+
+      <h2>4. Your submissions</h2>
+      <p>When you submit information through a form, an application, a pitch or a message, you confirm that it is accurate and that you have the right to share it. <strong>Please do not send us confidential or proprietary material.</strong> We do not agree to keep submissions confidential unless we have signed a separate written agreement with you, and we may use ideas and general information you share, without owing you payment or credit, to the extent the law permits. This does not affect any rights you hold in your own intellectual property.</p>
+      <p>If you submit a pitch application for an event, you also give us permission to use your company name, logo and a short description to present and promote the event, in line with your submission.</p>
+
+      <h2>5. Our content and intellectual property</h2>
+      <p>The Services, including the text, reports, graphics, logos, names, photographs and recordings we publish, belong to HNP or its licensors and are protected by copyright, trademark and other laws. We give you a limited, non-exclusive, revocable permission to view and download our public content for your own personal or internal business use, and to share short excerpts with credit to Health Nexus Partners and a link back to the source. You may not copy, republish, sell or build on our content beyond that without our written permission. The names Health Nexus Partners, Women's Health Nexus and Translation Nexus and their logos are our marks and may not be used without permission.</p>
+
+      <h2>6. Newsletter and email</h2>
+      <p>If you subscribe to our newsletter or ask for a resource, we will email you as described in our Privacy Policy. You can unsubscribe at any time using the link in any email. Our newsletter is delivered through Substack and is also subject to Substack's terms and privacy policy.</p>
+
+      <h2>7. Events</h2>
+      <p>Tickets and registration for our events are handled through the ticketing page for that event, and the terms shown there apply in addition to these terms. We may change an event's agenda, speakers, venue or date, and we may refuse entry or remove anyone whose conduct is unsafe or disruptive. We do not guarantee that any particular person will attend or speak.</p>
+      <p><strong>Photography and recording.</strong> We take photographs and video at our events and may use them to describe and promote HNP and its events, on our site, in our newsletters and on social media. We will post a notice at each event. If you do not want to appear in photographs or recordings, tell a member of our team at the event or contact us in writing and we will make reasonable efforts to respect that request, and to remove you from images we publish afterward where we reasonably can.</p>
+
+      <h2>8. Third-party sites and services</h2>
+      <p>The Services link to and depend on other sites and services, including LinkedIn, Substack and Luma. We do not control them and are not responsible for their content, availability or practices. Your use of them is at your own risk and subject to their own terms.</p>
+
+      <h2>9. Disclaimers</h2>
+      <p>The Services are provided "as is" and "as available." To the fullest extent the law allows, we do not make any promise or warranty of any kind, express or implied, including about accuracy, fitness for a particular purpose, non-infringement, or that the Services will be uninterrupted or free of errors or harmful components. Nothing in these terms excludes any warranty or right that cannot legally be excluded.</p>
+
+      <h2>10. Limitation of liability</h2>
+      <p>To the fullest extent the law allows, HNP, its owners, officers, employees and contributors will not be liable for any indirect, incidental, special, consequential or punitive damages, or for lost profits, revenue, data or business opportunities, arising from or related to your use of, or inability to use, the Services or your reliance on anything in them, even if we have been told such damages are possible. Our total liability for any claim relating to the Services is limited to the greater of one hundred dollars ($100) and the amount you paid us, if anything, in the twelve months before the claim arose. Some jurisdictions do not allow certain limitations, so some of these may not apply to you. Nothing in these terms limits liability that cannot be limited by law, including for fraud or for death or personal injury caused by negligence.</p>
+
+      <h2>11. Indemnity</h2>
+      <p>If you misuse the Services, break these terms or infringe someone else's rights, you agree to cover reasonable losses and legal costs that we incur as a result of a claim by a third party arising from that conduct, to the extent the law permits.</p>
+
+      <h2>12. Other agreements</h2>
+      <p>Sponsorships, partnerships, advisory engagements, memberships, cohorts and any investment or investment-related arrangement are governed by their own written terms or agreements. If one of those conflicts with these terms, that specific agreement controls for that subject.</p>
+
+      <h2>13. Changes, suspension and ending access</h2>
+      <p>We may change the Services or these terms at any time. We will post the updated terms here with a new effective date, and your continued use after that means you accept them. We may suspend or end your access to the Services at any time if you break these terms or for any other lawful reason.</p>
+
+      <h2>14. Governing law and disputes</h2>
+      <p>These terms are governed by the laws of the State of Maryland, without regard to its conflict-of-laws rules. Any dispute arising from these terms or the Services will be brought in the state or federal courts located in Maryland, and you and we each consent to those courts. Nothing here limits any consumer protection rights you have under the law of the place where you live that cannot be waived by agreement.</p>
+
+      <h2>15. General</h2>
+      <p>If any part of these terms is found to be unenforceable, the rest will stay in effect. If we do not enforce a provision, that is not a waiver of it. You may not transfer your rights under these terms without our consent, and we may transfer ours as part of a merger, sale or reorganization. These terms, together with the Privacy Policy and any agreement described in section 12, are the whole agreement between you and us about the Services.</p>
+
+      <h2>16. Contact</h2>
+      <p>For any question about these terms, use the form at healthnexuspartners.com/contact/.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="../" class="brand">
+          <img src="../assets/images/isotype-cream.png" alt="Health Nexus Partners mark" style="height:26px;">
+          <span>Health Nexus Partners</span>
+        </a>
+        <p class="tagline">The platform where health, capital, and policy meet.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="../#what-we-do">What We Do</a>
+        <a href="../#who-its-for">Who It's For</a>
+        <a href="../#find-your-room">Find Your Room</a>
+        <a href="../sponsor/">Sponsor</a>
+        <a href="/whn/" target="_blank" rel="noopener">Women's Health Nexus</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="../contact/">Contact</a>
+        <a href="https://www.linkedin.com/in/vipulkella/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://thetranslationnexus.substack.com" target="_blank" rel="noopener">Substack</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Health Nexus Partners &nbsp;&middot;&nbsp; <a href="/privacy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="/terms/">Terms</a></div>
+  </div>
+</footer>
+
+<script src="/assets/js/crm.js" defer></script>
+</body>
+</html>
