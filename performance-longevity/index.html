@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Performance &amp; Longevity Nexus — Health Nexus Partners</title>
+<meta name="description" content="Performance & Longevity Nexus — the next room from Health Nexus Partners. Preventative, clinical, data-driven longevity, not anti-aging aesthetics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0C3644; --aqua:#0A7A99; --cream:#EBDFCD; --cream-light:#FCF7F2;
+    --saffron:#D88044; --saffron-deep:#B96B2E; --ink:#0C3644;
+    --line: rgba(12,54,68,0.12); --line-onnavy: rgba(235,223,205,0.18);
+    --radius:10px; --shadow:0 24px 60px -24px rgba(13,47,54,0.4);
+    --ff-display:'PT Serif', Georgia, serif; --ff-body:'Outfit', -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--ff-body); color:var(--ink); background:var(--cream-light); line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  h1,h2,h3{font-family:var(--ff-display); line-height:1.15;}
+  .wrap{max-width:1200px; margin:0 auto; padding:0 32px;}
+  @media (max-width:640px){ .wrap{padding:0 22px;} }
+  section{padding:100px 0;}
+  @media (max-width:760px){ section{padding:64px 0;} }
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:14px 28px; border-radius:999px; font-weight:600; font-size:15px; transition:transform .15s ease, box-shadow .15s ease;}
+  .btn-primary{background:var(--saffron); color:var(--cream-light);}
+  .btn-primary:hover{transform:translateY(-1px); box-shadow:0 14px 28px -12px rgba(216,128,68,.55);}
+  .btn-outline{border:1.5px solid var(--line-onnavy); color:var(--cream-light);}
+  .btn-outline:hover{background:rgba(235,223,205,.08);}
+  .tag{font-size:13px; letter-spacing:.14em; text-transform:uppercase; font-weight:600; color:var(--saffron);}
+
+  header{position:sticky; top:0; z-index:50; background:var(--navy); border-bottom:1px solid var(--line-onnavy);}
+  nav.wrap{display:flex; align-items:center; justify-content:space-between; height:84px; gap:16px;}
+  .brand{display:flex; align-items:center; gap:12px; flex-shrink:0;}
+  .brand img{height:30px; width:auto;}
+  .brand span{font-family:var(--ff-body); font-weight:700; letter-spacing:.06em; font-size:16px; color:var(--cream-light); text-transform:uppercase; white-space:nowrap;}
+  .nav-right{display:flex; align-items:center; gap:30px;}
+  .nav-links{display:flex; align-items:center; gap:26px;}
+  .nav-links a{font-size:14.5px; font-weight:500; color:var(--cream); opacity:.9; white-space:nowrap;}
+  .nav-links a:hover{opacity:1; color:var(--cream-light);}
+  .nav-links a.active{opacity:1; color:var(--cream-light);}
+  .nav-links > a{padding:8px 10px;}
+  .nav-item{position:relative;}
+  .nav-item > summary{list-style:none; cursor:pointer; font-size:14.5px; font-weight:500; color:var(--cream); opacity:.9; display:flex; align-items:center; gap:5px; white-space:nowrap; padding:8px 10px; border-radius:6px;}
+  .nav-item > summary::-webkit-details-marker{display:none;}
+  .nav-item > summary::marker{content:'';}
+  .nav-item > summary:hover{opacity:1; color:var(--cream-light);}
+  .nav-item .chev{width:7px; height:7px; border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor; transform:rotate(45deg); transition:transform .15s ease; margin-top:-3px; flex-shrink:0;}
+  .nav-item[open] .chev{transform:rotate(-135deg); margin-top:1px;}
+  .nav-dropdown{position:absolute; top:calc(100% + 10px); left:50%; transform:translateX(-50%); background:var(--navy); border:1px solid var(--line-onnavy); border-radius:10px; padding:8px; min-width:230px; box-shadow:0 20px 40px -16px rgba(0,0,0,.45); z-index:60;}
+  .nav-dropdown a{display:block; padding:10px 14px; font-size:14px; border-radius:6px; color:var(--cream); opacity:.9; white-space:nowrap;}
+  .nav-dropdown a:hover{background:rgba(235,223,205,.08); opacity:1; color:var(--cream-light);}
+  .nav-cta{display:flex; align-items:center; gap:12px; flex-shrink:0;}
+  .nav-cta .btn{padding:10px 20px; font-size:14px; white-space:nowrap;}
+  .nav-toggle{display:none; align-items:center; justify-content:center; width:40px; height:40px; background:none; border:none; cursor:pointer; flex-shrink:0; padding:0;}
+  .nav-toggle span{display:block; width:22px; height:2px; background:var(--cream-light); position:relative; transition:background .15s ease;}
+  .nav-toggle span::before,.nav-toggle span::after{content:''; position:absolute; left:0; width:22px; height:2px; background:var(--cream-light); transition:transform .2s ease, top .2s ease;}
+  .nav-toggle span::before{top:-7px;}
+  .nav-toggle span::after{top:7px;}
+  header.open .nav-toggle span{background:transparent;}
+  header.open .nav-toggle span::before{top:0; transform:rotate(45deg);}
+  header.open .nav-toggle span::after{top:0; transform:rotate(-45deg);}
+  @media (max-width:900px){
+    .nav-right{display:none; position:absolute; top:84px; left:0; right:0; background:var(--navy); border-bottom:1px solid var(--line-onnavy); flex-direction:column; align-items:stretch; gap:0; padding:8px 0 24px; box-shadow:0 20px 40px -20px rgba(0,0,0,.4);}
+    header.open .nav-right{display:flex;}
+    .nav-links{flex-direction:column; align-items:stretch; gap:0;}
+    .nav-links a{padding:14px 32px; border-top:1px solid var(--line-onnavy); opacity:1;}
+    .nav-item > summary{padding:14px 32px; border-top:1px solid var(--line-onnavy); opacity:1; justify-content:space-between;}
+    .nav-dropdown{position:static; transform:none; background:rgba(0,0,0,.18); border:none; border-radius:0; padding:0; margin:0; box-shadow:none; min-width:0;}
+    .nav-dropdown a{padding:10px 32px 10px 48px; font-size:14px;}
+    .nav-cta{flex-direction:column; align-items:stretch; gap:10px; padding:18px 32px 0;}
+    .nav-cta .btn{justify-content:center;}
+    .nav-toggle{display:flex;}
+  }
+
+  .hero{background:var(--navy); color:var(--cream-light); padding:90px 0 70px; text-align:center;}
+  .hero h1{font-size:clamp(32px,4.8vw,52px); font-weight:700; margin:16px auto 20px; max-width:20ch;}
+  .hero p{font-size:17.5px; color:var(--cream); max-width:58ch; margin:0 auto 32px;}
+  .hero-actions{display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
+
+  .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start;}
+  @media (max-width:860px){ .about-grid{grid-template-columns:1fr;} }
+  .about-grid h2{font-size:clamp(24px,3vw,32px); margin-bottom:18px;}
+  .about-grid p{font-size:16px; color:var(--navy); opacity:.85; margin-bottom:16px;}
+  .crossover{background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:28px; box-shadow:var(--shadow);}
+  .crossover h3{font-size:15px; text-transform:uppercase; letter-spacing:.08em; color:var(--aqua); margin-bottom:16px;}
+  .crossover ul{list-style:none;}
+  .crossover li{font-size:15px; color:var(--navy); opacity:.85; padding:10px 0; border-top:1px solid var(--line);}
+  .crossover li:first-child{border-top:none;}
+  .crossover li strong{color:var(--navy); opacity:1; display:block; margin-bottom:2px;}
+
+  .status-band{background:var(--cream);}
+  .status-head{text-align:center; max-width:60ch; margin:0 auto 36px;}
+  .status-head h2{font-size:clamp(24px,3vw,32px); margin-top:12px;}
+  .status-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  @media (max-width:760px){ .status-grid{grid-template-columns:1fr;} }
+  .status-card{background:var(--cream-light); border:1px solid var(--line); border-radius:var(--radius); padding:26px;}
+  .status-card .k{font-size:13px; text-transform:uppercase; letter-spacing:.08em; color:var(--aqua); font-weight:600; margin-bottom:8px;}
+  .status-card .v{font-family:var(--ff-display); font-size:20px; color:var(--navy); font-weight:700;}
+  .status-card .n{font-size:13.5px; color:var(--navy); opacity:.6; margin-top:6px;}
+
+  .bridge{background:var(--navy); color:var(--cream-light); text-align:center;}
+  .bridge h2{font-size:clamp(26px,3.6vw,38px); margin:14px auto 16px; max-width:22ch;}
+  .bridge p{font-size:16.5px; color:var(--cream); max-width:54ch; margin:0 auto 32px;}
+  .bridge-actions{display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
+
+  footer{background:var(--navy); color:var(--cream); padding:64px 0 36px; border-top:1px solid var(--line-onnavy);}
+  .footer-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:32px; margin-bottom:40px;}
+  footer .brand span{color:var(--cream-light);}
+  footer p.tagline{margin-top:10px; font-size:14px; color:var(--cream); opacity:.8; max-width:30ch;}
+  .footer-col h4{font-size:13px; text-transform:uppercase; letter-spacing:.1em; color:var(--cream-light); margin-bottom:14px;}
+  .footer-col a{display:block; font-size:14.5px; color:var(--cream); opacity:.85; margin-bottom:8px;}
+  .footer-col a:hover{opacity:1;}
+  .footer-bottom{border-top:1px solid var(--line-onnavy); padding-top:24px; font-size:13px; color:var(--cream); opacity:.65;}
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <nav class="wrap">
+    <a href="/" class="brand">
+      <img src="/assets/images/isotype-cream.png" alt="Health Nexus Partners mark">
+      <span>Health Nexus Partners</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-right">
+      <span></span>
+    </button>
+    <div class="nav-right" id="nav-right">
+      <div class="nav-links">
+        <details class="nav-item">
+          <summary>About <span class="chev"></span></summary>
+          <div class="nav-dropdown">
+            <a href="/about/">Vipul Kella</a>
+            <a href="/#what-we-do">Health Nexus Partners</a>
+          </div>
+        </details>
+        <details class="nav-item">
+          <summary>Find Your Room <span class="chev"></span></summary>
+          <div class="nav-dropdown">
+            <a href="/whn/">Women's Health Nexus</a>
+            <a href="./" class="active">Performance &amp; Longevity Nexus</a>
+          </div>
+        </details>
+        <details class="nav-item">
+          <summary>Work With Us <span class="chev"></span></summary>
+          <div class="nav-dropdown">
+            <a href="/sponsor/">Sponsor</a>
+            <a href="/cohort/">Cohort</a>
+          </div>
+        </details>
+        <a href="/insights/">Insights</a>
+      </div>
+      <div class="nav-cta">
+        <a href="/contact/" class="btn btn-outline">Contact</a>
+        <a href="/recap/" class="btn btn-primary">WHN 2026 Recap</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<script>
+  (function(){
+    var header = document.getElementById('site-header');
+    var toggle = document.getElementById('nav-toggle');
+    var panel = document.getElementById('nav-right');
+    toggle.addEventListener('click', function(){
+      var isOpen = header.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    panel.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        header.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.querySelectorAll('.nav-item').forEach(function(d){
+      d.addEventListener('toggle', function(){
+        if(d.open){
+          document.querySelectorAll('.nav-item').forEach(function(o){ if(o!==d) o.removeAttribute('open'); });
+        }
+      });
+    });
+    document.addEventListener('click', function(e){
+      document.querySelectorAll('.nav-item[open]').forEach(function(d){
+        if(!d.contains(e.target)) d.removeAttribute('open');
+      });
+    });
+  })();
+</script>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Coming in 2027 · Washington, DC</span>
+    <h1>The next room: Performance &amp; Longevity Nexus.</h1>
+    <p>Same model that built Women's Health Nexus — physicians, capital, and policy in one room — applied to preventative, clinical, data-driven longevity. City, agenda, and pricing are still being finalized.</p>
+    <div class="hero-actions">
+      <a href="/contact/" class="btn btn-primary">Get on the list</a>
+      <a href="/recap/" class="btn btn-outline">See how WHN 2026 went</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap about-grid">
+    <div>
+      <span class="tag">What this room is</span>
+      <h2>Preventative, clinical, data-driven — not anti-aging aesthetics.</h2>
+      <p>Performance & Longevity Nexus is built around the same question every HNP room asks: where does the money, the clinical evidence, and the policy reality actually meet? Here, that means biomarkers, genomics, and wearables that change outcomes — not supplements and skincare dressed up as science.</p>
+      <p>Expect the same format that made WHN 2026 work: curated panels, a vetted pitch competition, and a room small enough that the right conversations actually happen.</p>
+    </div>
+    <div class="crossover">
+      <h3>Natural crossover</h3>
+      <ul>
+        <li><strong>Women's health</strong>Cardiovascular prevention and chronic disease management carry straight over from WHN.</li>
+        <li><strong>Sports tech</strong>Wearables, biomarkers, and genomics sit at the center of both rooms.</li>
+        <li><strong>Policy</strong>The same DC-adjacent policy conversations — prevention, reimbursement, access — apply here too.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="status-band">
+  <div class="wrap">
+    <div class="status-head">
+      <span class="tag">Where things stand</span>
+      <h2>What's confirmed, what's still open</h2>
+    </div>
+    <div class="status-grid">
+      <div class="status-card">
+        <div class="k">Format</div>
+        <div class="v">Confirmed</div>
+        <div class="n">Same curated panel + pitch competition model as WHN 2026.</div>
+      </div>
+      <div class="status-card">
+        <div class="k">City &amp; date</div>
+        <div class="v">Still finalizing</div>
+        <div class="n">We'll confirm here the moment it's locked.</div>
+      </div>
+      <div class="status-card">
+        <div class="k">Pricing &amp; sponsorship</div>
+        <div class="v">Still finalizing</div>
+        <div class="n">Tell us you're interested now and we'll reach out first.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bridge">
+  <div class="wrap">
+    <span class="tag">Be first in the room</span>
+    <h2>Want in before this goes public?</h2>
+    <p>Tell us now — as a sponsor, a speaker, or just someone who wants to be in the room — and we'll reach out the moment the details are locked.</p>
+    <div class="bridge-actions">
+      <a href="/contact/" class="btn btn-primary">Get on the list</a>
+      <a href="/sponsor/" class="btn btn-outline">Explore partnership</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="brand">
+          <img src="/assets/images/isotype-cream.png" alt="Health Nexus Partners mark" style="height:26px;">
+          <span>Health Nexus Partners</span>
+        </a>
+        <p class="tagline">The platform where health, capital, and policy meet.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="/#what-we-do">What We Do</a>
+        <a href="/#who-its-for">Who It's For</a>
+        <a href="/sponsor/">Sponsor</a>
+        <a href="/recap/">WHN 2026 Recap</a>
+        <a href="/whn/" target="_blank" rel="noopener">Women's Health Nexus</a>
+      </div>
+      <div class="footer-col">
+        <h4>Vipul Kella</h4>
+        <a href="/about/">About</a>
+        <a href="/speaking/">Speaking</a>
+        <a href="/press/">Press &amp; Media</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="/contact/">Contact</a>
+        <a href="https://www.linkedin.com/in/vipulkella/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://thetranslationnexus.substack.com" target="_blank" rel="noopener">Substack</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Health Nexus Partners</div>
+  </div>
+</footer>
+
+</body>
+</html>
