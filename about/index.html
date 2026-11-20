@@ -40,9 +40,45 @@
   .brand{display:flex; align-items:center; gap:12px; flex-shrink:0;}
   .brand img{height:30px; width:auto;}
   .brand span{font-weight:700; letter-spacing:.06em; font-size:16px; color:var(--cream-light); text-transform:uppercase; white-space:nowrap;}
+  .nav-right{display:flex; align-items:center; gap:30px;}
   .nav-links{display:flex; align-items:center; gap:26px;}
   .nav-links a{font-size:14.5px; font-weight:500; color:var(--cream); opacity:.9; white-space:nowrap;}
   .nav-links a:hover{opacity:1; color:var(--cream-light);}
+  .nav-links > a{padding:8px 10px;}
+  .nav-item{position:relative;}
+  .nav-item > summary{list-style:none; cursor:pointer; font-size:14.5px; font-weight:500; color:var(--cream); opacity:.9; display:flex; align-items:center; gap:5px; white-space:nowrap; padding:8px 10px; border-radius:6px;}
+  .nav-item > summary::-webkit-details-marker{display:none;}
+  .nav-item > summary::marker{content:'';}
+  .nav-item > summary:hover{opacity:1; color:var(--cream-light);}
+  .nav-item .chev{width:7px; height:7px; border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor; transform:rotate(45deg); transition:transform .15s ease; margin-top:-3px; flex-shrink:0;}
+  .nav-item[open] .chev{transform:rotate(-135deg); margin-top:1px;}
+  .nav-dropdown{position:absolute; top:calc(100% + 10px); left:50%; transform:translateX(-50%); background:var(--navy); border:1px solid var(--line-onnavy); border-radius:10px; padding:8px; min-width:230px; box-shadow:0 20px 40px -16px rgba(0,0,0,.45); z-index:60;}
+  .nav-dropdown a{display:block; padding:10px 14px; font-size:14px; border-radius:6px; color:var(--cream); opacity:.9; white-space:nowrap;}
+  .nav-dropdown a:hover{background:rgba(235,223,205,.08); opacity:1; color:var(--cream-light);}
+  .nav-links a.active{opacity:1; color:var(--cream-light);}
+  .nav-cta{display:flex; align-items:center; gap:12px; flex-shrink:0;}
+  .nav-cta .btn{padding:10px 20px; font-size:14px; white-space:nowrap;}
+  .nav-toggle{display:none; align-items:center; justify-content:center; width:40px; height:40px; background:none; border:none; cursor:pointer; flex-shrink:0; padding:0;}
+  .nav-toggle span{display:block; width:22px; height:2px; background:var(--cream-light); position:relative; transition:background .15s ease;}
+  .nav-toggle span::before,.nav-toggle span::after{content:''; position:absolute; left:0; width:22px; height:2px; background:var(--cream-light); transition:transform .2s ease, top .2s ease;}
+  .nav-toggle span::before{top:-7px;}
+  .nav-toggle span::after{top:7px;}
+  header.open .nav-toggle span{background:transparent;}
+  header.open .nav-toggle span::before{top:0; transform:rotate(45deg);}
+  header.open .nav-toggle span::after{top:0; transform:rotate(-45deg);}
+
+  @media (max-width:900px){
+    .nav-right{display:none; position:absolute; top:84px; left:0; right:0; background:var(--navy); border-bottom:1px solid var(--line-onnavy); flex-direction:column; align-items:stretch; gap:0; padding:8px 0 24px; box-shadow:0 20px 40px -20px rgba(0,0,0,.4);}
+    header.open .nav-right{display:flex;}
+    .nav-links{flex-direction:column; align-items:stretch; gap:0;}
+    .nav-links a{padding:14px 32px; border-top:1px solid var(--line-onnavy); opacity:1;}
+    .nav-item > summary{padding:14px 32px; border-top:1px solid var(--line-onnavy); opacity:1; justify-content:space-between;}
+    .nav-dropdown{position:static; transform:none; background:rgba(0,0,0,.18); border:none; border-radius:0; padding:0; margin:0; box-shadow:none; min-width:0;}
+    .nav-dropdown a{padding:10px 32px 10px 48px; font-size:14px;}
+    .nav-cta{flex-direction:column; align-items:stretch; gap:10px; padding:18px 32px 0;}
+    .nav-cta .btn{justify-content:center;}
+    .nav-toggle{display:flex;}
+  }
 
   .vk-hero{background:var(--navy); color:var(--cream-light); padding:90px 0 70px;}
   .vk-hero-grid{display:grid; grid-template-columns:260px 1fr; gap:50px; align-items:center;}
@@ -87,21 +123,76 @@
 </head>
 <body>
 
-<header>
+<header id="site-header">
   <nav class="wrap">
     <a href="../" class="brand">
       <img src="../assets/images/isotype-cream.png" alt="Health Nexus Partners mark">
       <span>Health Nexus Partners</span>
     </a>
-    <div class="nav-links">
-      <a href="../#what-we-do">What We Do</a>
-      <a href="../#find-your-room">Find Your Room</a>
-      <a href="../sponsor/">Sponsor</a>
-      <a href="./">About Vipul</a>
-      <a href="../contact/" class="btn btn-outline" style="padding:10px 20px; font-size:14px;">Contact</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-right">
+      <span></span>
+    </button>
+    <div class="nav-right" id="nav-right">
+      <div class="nav-links">
+        <details class="nav-item">
+          <summary>About <span class="chev"></span></summary>
+          <div class="nav-dropdown">
+            <a href="./" class="active">Vipul Kella</a>
+            <a href="/#what-we-do">Health Nexus Partners</a>
+          </div>
+        </details>
+        <details class="nav-item">
+          <summary>Find Your Room <span class="chev"></span></summary>
+          <div class="nav-dropdown">
+            <a href="/whn/">Women's Health Nexus</a>
+            <a href="/performance-longevity/">Performance &amp; Longevity Nexus</a>
+          </div>
+        </details>
+        <details class="nav-item">
+          <summary>Work With Us <span class="chev"></span></summary>
+          <div class="nav-dropdown">
+            <a href="/sponsor/">Sponsor</a>
+            <a href="/cohort/">Cohort</a>
+          </div>
+        </details>
+        <a href="/insights/">Insights</a>
+      </div>
+      <div class="nav-cta">
+        <a href="../contact/" class="btn btn-outline">Contact</a>
+        <a href="../recap/" class="btn btn-primary">WHN 2026 Recap</a>
+      </div>
     </div>
   </nav>
 </header>
+<script>
+  (function(){
+    var header = document.getElementById('site-header');
+    var toggle = document.getElementById('nav-toggle');
+    var panel = document.getElementById('nav-right');
+    toggle.addEventListener('click', function(){
+      var isOpen = header.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    panel.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        header.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.querySelectorAll('.nav-item').forEach(function(d){
+      d.addEventListener('toggle', function(){
+        if(d.open){
+          document.querySelectorAll('.nav-item').forEach(function(o){ if(o!==d) o.removeAttribute('open'); });
+        }
+      });
+    });
+    document.addEventListener('click', function(e){
+      document.querySelectorAll('.nav-item[open]').forEach(function(d){
+        if(!d.contains(e.target)) d.removeAttribute('open');
+      });
+    });
+  })();
+</script>
 
 <section class="vk-hero">
   <div class="wrap vk-hero-grid">
@@ -196,12 +287,6 @@
         <a href="../#find-your-room">Find Your Room</a>
         <a href="../sponsor/">Sponsor</a>
         <a href="/whn/" target="_blank" rel="noopener">Women's Health Nexus</a>
-      </div>
-      <div class="footer-col">
-        <h4>Vipul Kella</h4>
-        <a href="./">About</a>
-        <a href="../speaking/">Speaking</a>
-        <a href="../press/">Press &amp; Media</a>
       </div>
       <div class="footer-col">
         <h4>Connect</h4>
